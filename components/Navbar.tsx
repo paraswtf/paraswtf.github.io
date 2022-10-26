@@ -33,6 +33,7 @@ export default class Navbar extends Component {
 					<FontAwesomeIcon
 						icon={faTerminal}
 						size="xs"
+						style={{ maxWidth: "1.5rem", maxHeight: "1.5rem" }}
 					/>
 					{this.state.logoContentHover ? "..Styxo/" : " Styxo/"}
 				</Typography>
