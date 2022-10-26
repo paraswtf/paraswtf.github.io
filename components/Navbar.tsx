@@ -30,7 +30,10 @@ export default class Navbar extends Component {
 					onMouseEnter={() => this.setState({ ...this.state, logoContentHover: true })}
 					onMouseLeave={() => this.setState({ ...this.state, logoContentHover: false })}
 				>
-					<FontAwesomeIcon icon={faTerminal} />
+					<FontAwesomeIcon
+						className="fa-icon"
+						icon={faTerminal}
+					/>
 					{this.state.logoContentHover ? "..Styxo/" : " Styxo/"}
 				</Typography>
 
@@ -39,6 +42,7 @@ export default class Navbar extends Component {
 					onClick={this.handleClick}
 				>
 					<FontAwesomeIcon
+						className="fa-icon"
 						icon={this.state.clicked ? faTimes : faBars}
 						color="white"
 						onClick={this.handleClick}

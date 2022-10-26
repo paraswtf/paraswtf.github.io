@@ -39,3 +39,9 @@ code {
 ::-webkit-scrollbar-thumb:hover {
 	background: #bc4831;
 }
+
+.fa-icon {
+	color: #ffffff;
+	width: 28px;
+	height: 28px;
+}

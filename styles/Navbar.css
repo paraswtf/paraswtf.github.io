@@ -22,8 +22,6 @@
 }
 
 .navbar-logo {
-	display: flex;
-	flex-direction: row;
 	color: rgb(255, 255, 255);
 	background-image: linear-gradient(to right, #7e7e7e44, #4d4d4d44);
 	border-radius: 5px;
