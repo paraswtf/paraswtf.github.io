@@ -24,12 +24,12 @@ function Home() {
 				<div className="GridLinesHorizontal Logo">
 					<div className="GridLinesVertical Logo">
 						<div className="HeroImageSection">
-							<img
+							<Image
 								className="HeroImage"
 								src="/logo.png"
 								alt="Styxo Logo"
 							/>
-							<img
+							<Image
 								className="HeroImageMobile"
 								src="/logo-mobile.png"
 								alt="Styxo Logo"
@@ -56,7 +56,7 @@ function Home() {
 								fontFamily="Londrina Solid"
 								fontSize="100px"
 							>
-								I'm Paras Deshpande
+								{"I'm Paras Deshpande"}
 							</Typography>
 						</div>
 					</div>
