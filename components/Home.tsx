@@ -25,14 +25,24 @@ function Home() {
 					<div className="GridLinesVertical Logo">
 						<div className="HeroImageSection">
 							<Image
+								priority={true}
+								placeholder="blur"
+								blurDataURL="/logo.png"
 								className="HeroImage"
 								src="/logo.png"
 								alt="Styxo Logo"
+								width={400}
+								height={400}
 							/>
 							<Image
+								priority={true}
+								placeholder="blur"
+								blurDataURL="/logo-mobile.png"
 								className="HeroImageMobile"
 								src="/logo-mobile.png"
 								alt="Styxo Logo"
+								width={300}
+								height={300}
 							/>
 						</div>
 					</div>
@@ -83,6 +93,8 @@ function Home() {
 							<Image
 								src={"/" + link.icon + "Icon.svg"}
 								alt={link.icon}
+								height={30}
+								width={30}
 							/>
 						</IconButton>
 					))}
