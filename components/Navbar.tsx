@@ -30,7 +30,10 @@ export default class Navbar extends Component {
 					onMouseEnter={() => this.setState({ ...this.state, logoContentHover: true })}
 					onMouseLeave={() => this.setState({ ...this.state, logoContentHover: false })}
 				>
-					<FontAwesomeIcon icon={faTerminal} />
+					<FontAwesomeIcon
+						icon={faTerminal}
+						size="xs"
+					/>
 					{this.state.logoContentHover ? "..Styxo/" : " Styxo/"}
 				</Typography>
 
