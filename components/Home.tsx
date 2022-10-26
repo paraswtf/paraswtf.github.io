@@ -1,4 +1,5 @@
 import { IconButton, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
 var contactLinks = [
@@ -79,7 +80,7 @@ function Home() {
 							className={"HeroContactIcon" + (index > 9 ? " Extra" : "")}
 							key={index}
 						>
-							<img
+							<Image
 								src={"/" + link.icon + "Icon.svg"}
 								alt={link.icon}
 							/>
