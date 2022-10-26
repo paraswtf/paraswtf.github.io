@@ -14,7 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/material": "^5.10.10",
-    "next": "^12.3.2-canary.40",
+    "next": "^13.0.0",
     "next-seo": "^5.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
