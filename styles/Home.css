@@ -1,0 +1,235 @@
+:root {
+	--grid-opacity: 0.2;
+	--gradient-horizontal: linear-gradient(
+			/**/ to right,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 0)) 0%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 0.4)) 12%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 1)) 25%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 1)) 75%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 0.4)) 88%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 0)) 100%
+		)
+		25;
+	--gradient-vertical: linear-gradient(
+			/**/ to bottom,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 0)) 0%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 0.4)) 12%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 1)) 25%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 1)) 75%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 0.4)) 88%,
+			rgba(34, 34, 34, calc(var(--grid-opacity) * 0)) 100%
+		)
+		25;
+}
+
+.HeroScrollDown {
+	background-color: red;
+	padding: 20px;
+	border-radius: 50%;
+}
+
+.PageContainer {
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	padding-top: 120px;
+}
+
+.HeroImageMobile {
+	display: none;
+}
+
+.HeroImage {
+	max-height: 400px;
+	-webkit-filter: drop-shadow(5px 5px 15px rgba(34, 34, 34, 0.3));
+	filter: drop-shadow(5px 5px 15px rgba(34, 34, 34, 0.3));
+}
+
+.HeroSection {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	min-height: 500px;
+	height: calc(100vh - 140px);
+	border-radius: 13px;
+	border: 1px solid orange;
+	overflow: hidden;
+	width: 95%;
+	margin-bottom: 20px;
+}
+
+.HeroText {
+	color: black !important;
+}
+
+.HeroText.Hello {
+	margin-bottom: -20px;
+}
+
+.HeroText.Name {
+	line-height: 80%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: max-content;
+}
+
+.HeroText.AKA {
+	padding-top: 10px;
+	color: #c75e3e !important;
+	margin-bottom: -10px;
+}
+
+.HeroTextSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: left;
+	position: relative;
+}
+
+.HeroIconsSection {
+	display: flex;
+	flex-direction: column;
+}
+
+.GridLinesHorizontal {
+	border-width: 1px;
+	border-style: solid;
+	border-left: 0;
+	border-right: 0;
+	border-image: var(--gradient-horizontal) 10%;
+}
+
+.GridLinesVertical {
+	border-width: 1px;
+	border-style: solid;
+	border-top: 0;
+	border-bottom: 0;
+	border-image: var(--gradient-vertical);
+}
+
+.GridLinesVertical.Logo {
+	margin-top: -50px;
+	margin-bottom: -50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.GridLinesHorizontal.Text {
+	padding: auto;
+	margin: auto;
+	margin-left: 0 !important;
+}
+
+.GridLinesVertical.Text.Hello {
+	border-left: 0;
+}
+
+.GridLinesHorizontal.Text.Hello {
+	border-top: 0;
+	padding: auto;
+	margin: auto;
+	margin-left: -80px !important;
+	padding-left: 80px !important;
+}
+
+.GridLinesHorizontal.Text.Name {
+	border-top: 0;
+	line-clamp: 10px;
+}
+
+.GridLinesVertical.Text.Name {
+	margin-bottom: -64px;
+	border-right: 0;
+}
+
+.GridLinesHorizontal.Text.AKA {
+	border-top: 0;
+}
+
+.GridLinesVertical.Text {
+	margin-top: -50px;
+	margin-bottom: -50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1530px) {
+	.HeroText.Name {
+		line-height: 80%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: min-content;
+	}
+}
+
+@media screen and (max-width: 1130px) {
+	.HeroImage {
+		display: none;
+	}
+	.HeroImageMobile {
+		display: block;
+		max-height: 300px;
+		margin-top: -50px;
+		margin-bottom: -50px;
+	}
+	.HeroSection {
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: center !important;
+		align-items: center !important;
+		padding: auto !important;
+		min-height: 550px !important;
+	}
+	.GridLinesHorizontal.Text.Hello {
+		margin-left: auto !important;
+		padding-left: 0 !important;
+		margin: auto !important;
+	}
+	.GridLinesHorizontal.Text.Name {
+		margin: auto !important;
+		text-align: center;
+	}
+	.GridLinesVertical.Text.Hello {
+		border-left: 1px solid;
+	}
+	.GridLinesVertical.Text.Name {
+		border-right: 1px solid;
+	}
+	.GridLinesHorizontal.Text.AKA {
+		margin: auto !important;
+	}
+
+	.HeroText.Hello {
+		font-size: 70px !important;
+		margin-bottom: -10px !important;
+	}
+
+	.HeroText.Name {
+		font-size: 60px !important;
+	}
+
+	.HeroText {
+		font-size: 50px !important;
+	}
+
+	.HeroIconsSection {
+		display: grid;
+		grid-template-columns: repeat(5, auto);
+		padding-top: 20px;
+	}
+
+	.HeroContactIcon {
+		padding: 5px !important;
+	}
+
+	.HeroContactIcon.Extra {
+		display: none;
+	}
+}
