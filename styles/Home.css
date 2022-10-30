@@ -61,7 +61,7 @@
 }
 
 .HeroText {
-	color: black !important;
+	color: black;
 }
 
 .HeroText.Hello {
@@ -215,7 +215,7 @@
 	}
 
 	.HeroText {
-		font-size: 50px !important;
+		font-size: 50px;
 	}
 
 	.HeroIconsSection {
