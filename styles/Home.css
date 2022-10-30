@@ -61,7 +61,7 @@
 }
 
 .HeroText {
-	color: black;
+	color: black !important;
 }
 
 .HeroText.Hello {
