@@ -15,9 +15,7 @@ const StyledMainContainer = styled.main`
     a {
       &:hover,
       &:focus {
-        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>⚡</text></svg>")
-            20 0,
-          auto;
+        transform: translateY(-3px);
       }
     }
   }
@@ -153,8 +151,8 @@ const BlogPage = ({ location, data }) => {
         <header>
           <h1 className="big-heading">Blog</h1>
           <p className="subtitle">
-            <a href="https://www.wizardingworld.com/writing-by-jk-rowling/pensieve">
-              interesting challenges that I overcame as a developer
+            <a href="https://rubberduckdebugging.com/" target="_blank" rel="noreferrer">
+              I like to write stuff sometimes :)
             </a>
           </p>
         </header>
