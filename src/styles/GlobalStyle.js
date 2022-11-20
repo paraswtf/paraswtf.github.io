@@ -135,10 +135,10 @@ const GlobalStyle = createGlobalStyle`
         padding: 0 100px;
       }
       @media (max-width: 768px) {
-        padding: 0 50px;
+        padding: 50px 50px;
       }
       @media (max-width: 480px) {
-        padding: 0 25px;
+        padding: 100px 25px;
       }
     }
   }
