@@ -17,9 +17,6 @@ tags:
 > Arya Chavan
 > ![Arya Chauhan](./AryaChauhan.png)
 
-> Ekam Kaur
-> ![Ekam Kaur](./EkamKaur.png)
-
 > Swati Murthy
 > ![Swati Murthy](./SwatiMurthy.png)
 
