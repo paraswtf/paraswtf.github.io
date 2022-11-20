@@ -112,7 +112,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main {
-    margin: 0 auto;
+    margin: 100px auto;
     width: 100%;
     max-width: 1600px;
     min-height: 100vh;
@@ -135,10 +135,10 @@ const GlobalStyle = createGlobalStyle`
         padding: 0 100px;
       }
       @media (max-width: 768px) {
-        padding: 50px 50px;
+        padding: 0 50px;
       }
       @media (max-width: 480px) {
-        padding: 100px 25px;
+        padding: 0 25px;
       }
     }
   }
