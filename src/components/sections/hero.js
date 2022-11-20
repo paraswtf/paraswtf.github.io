@@ -49,12 +49,14 @@ const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
 
-  const [theme, setTheme] = useState('light');
+  const [isDark, setDark] = useState(true);
 
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
     }
+
+    setDark(document.documentElement.dataset.theme === 'dark');
 
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
     return () => clearTimeout(timeout);
@@ -96,12 +98,12 @@ const Hero = () => {
         onClickCapture={e => {
           e.preventDefault();
           const { theme } = document.documentElement.dataset;
-          setTheme(theme);
           const themeTo = theme && theme === 'light' ? 'dark' : 'light';
+          setDark(themeTo === 'dark');
           document.documentElement.setAttribute('data-theme', themeTo);
           localStorage.setItem('theme', themeTo);
         }}>
-        Activate {theme} mode
+        Activate {isDark ? 'light' : 'dark'} mode
       </button>
     </>
   );
