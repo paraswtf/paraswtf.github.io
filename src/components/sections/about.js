@@ -154,12 +154,6 @@ const About = () => {
               <a href="https://www.instagram.com/challengefitness007/">Challenge Fitness</a>, and{' '}
               <a href="https://www.instagram.com/am._designs/">AM Designs</a>, a small art business.
             </p>
-            <p>
-              Soon this page will host the website for{' '}
-              <a href="https://instagram.com/styxo.codes">styxo.codes</a> and this portfolio will be
-              moved somewhere else, because of the entire rebranding thing, hopefully it doesn't
-              become really confusing :/
-            </p>
 
             <p>
               I have also recently been working on a{' '}
