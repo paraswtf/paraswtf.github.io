@@ -92,17 +92,13 @@ const Hero = () => {
       </a>{' '}
       <button
         className="email-link js-theme-toggle"
-        aria-label="Activate dark mode"
+        aria-label="Theme toggle"
         onClickCapture={() => {
           const { theme } = document.documentElement.dataset;
           setTheme(theme);
           const themeTo = theme && theme === 'light' ? 'dark' : 'light';
-          const label = `Activate ${theme} mode`;
-
           document.documentElement.setAttribute('data-theme', themeTo);
           localStorage.setItem('theme', themeTo);
-
-          this.setAttribute('aria-label', label);
         }}>
         Activate {theme} mode
       </button>
