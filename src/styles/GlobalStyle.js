@@ -112,7 +112,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main {
-    margin: 100px auto;
+    margin: auto;
     width: 100%;
     max-width: 1600px;
     min-height: 100vh;
