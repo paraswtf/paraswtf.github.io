@@ -93,7 +93,8 @@ const Hero = () => {
       <button
         className="email-link js-theme-toggle"
         aria-label="Theme toggle"
-        onClickCapture={() => {
+        onClickCapture={e => {
+          e.preventDefault();
           const { theme } = document.documentElement.dataset;
           setTheme(theme);
           const themeTo = theme && theme === 'light' ? 'dark' : 'light';

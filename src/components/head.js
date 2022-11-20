@@ -42,7 +42,7 @@ const Head = ({ title, description, image }) => {
 
   return (
     <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
-      <html lang="en" data-theme={localStorage.getItem('theme') || 'dark'} />
+      <html lang="en" data-theme="dark" />
 
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
@@ -60,6 +60,11 @@ const Head = ({ title, description, image }) => {
       <meta name="twitter:image" content={seo.image} />
 
       <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
+
+      <script>
+        const localStorageTheme = localStorage.getItem('theme'); if (localStorageTheme)
+        document.documentElement.setAttribute('data-theme', localStorageTheme);
+      </script>
     </Helmet>
   );
 };
