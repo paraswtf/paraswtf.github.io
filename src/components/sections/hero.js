@@ -49,6 +49,8 @@ const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
 
+  const [theme, setTheme] = useState('light');
+
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
@@ -64,8 +66,11 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m currently a student at{' '}
-        <a href="https://www.ryangroup.org/" target="_blank" rel="noreferrer">
+        I’m currently a student of{' '}
+        <a
+          href="https://www.ryangroup.org/ryaninternational/icse/navi-mumbai/ryan-international-school-kharghar"
+          target="_blank"
+          rel="noreferrer">
           Ryan International School
         </a>{' '}
         doing my 12th. I’m a full-stack developer specializing in building fast and reliable web
@@ -78,9 +83,30 @@ const Hero = () => {
     </>
   );
   const five = (
-    <a className="email-link" href="mailto:paras@styxo.codes" target="_blank" rel="noreferrer">
-      Get in touch!
-    </a>
+    <>
+      <a className="email-link" href="mailto:paras@styxo.codes" target="_blank" rel="noreferrer">
+        Get in touch!
+      </a>{' '}
+      <a className="email-link" href="/blog">
+        Read my blog!
+      </a>{' '}
+      <button
+        className="email-link js-theme-toggle"
+        aria-label="Activate dark mode"
+        onClickCapture={() => {
+          const { theme } = document.documentElement.dataset;
+          setTheme(theme);
+          const themeTo = theme && theme === 'light' ? 'dark' : 'light';
+          const label = `Activate ${theme} mode`;
+
+          document.documentElement.setAttribute('data-theme', themeTo);
+          localStorage.setItem('theme', themeTo);
+
+          this.setAttribute('aria-label', label);
+        }}>
+        Activate {theme} mode
+      </button>
+    </>
   );
 
   const items = [one, two, three, four, five];
