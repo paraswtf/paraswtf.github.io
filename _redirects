@@ -1,6 +1,2 @@
-[[redirects]]
-  from = "/"
-  to = "https://paras.codes"
-  status = 200
-  force = true # COMMENT: ensure that we always redirect
-  headers = {X-From = "Netlify"}
+# Redirects from what the browser requests to what we serve
+/              https://paras.codes
