@@ -6,6 +6,8 @@ draft: false
 slug: /blog/creating-barcodes-in-terminal
 tags:
   - Learning
+  - School
+  - JavaScript
 ---
 
 There are various types of barcodes and standards, here, I'll be referring to UPC-A barcodes.
