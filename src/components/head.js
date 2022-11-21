@@ -61,6 +61,11 @@ const Head = ({ title, description, image }) => {
 
       <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
 
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      />
+
       <script>
         document.documentElement.setAttribute('data-theme', localStorage.getItem('theme')||'dark');
       </script>
