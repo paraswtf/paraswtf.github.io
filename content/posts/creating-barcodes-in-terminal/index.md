@@ -1,5 +1,5 @@
 ---
-title: Creating CLI Barcodes using Java
+title: Creating CLI Barcodes using JavaScript
 description: Understanding how barcodes store data and how to create your own
 date: 2022-03-28
 draft: false
