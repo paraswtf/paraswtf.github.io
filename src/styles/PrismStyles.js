@@ -106,6 +106,22 @@ const PrismStyles = css`
     left: 1.25rem;
     padding: 0.25rem 0.5rem;
   }
+  .gatsby-highlight pre[class='language-error']::before {
+    content: 'error';
+    background-color: rgba(255, 80, 80, 0.4);
+  }
+  .gatsby-highlight pre[class='language-tsx']::before {
+    content: 'tsx';
+  }
+  .gatsby-highlight pre[class='language-typescript']::before {
+    content: 'ts';
+  }
+  .gatsby-highlight pre[class='language-ts']::before {
+    content: 'ts';
+  }
+  .gatsby-highlight pre[class='language-java']::before {
+    content: 'java';
+  }
   .gatsby-highlight pre[class='language-javascript']::before {
     content: 'js';
   }
