@@ -71,8 +71,8 @@ these are the plays:\
 
 If we organize this a bit differently, we can find a pattern\
 `player choice`\
-`A` `B` `C` `A` `B`\
-`C` `A` `B` `C` `A` <- the array we created\
+`A` `B` `C` `A`\
+`C` `A` `B` `C` <- the array we created\
 `opponent choice`
 
 Notice how whenever we win, the opponent's choice is always one value behind of the player's choice in the array.\
