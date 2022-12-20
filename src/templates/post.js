@@ -38,16 +38,11 @@ const StyledPostContent = styled.div`
   }
 
   code {
-    background-color: var(--lightest-navy);
+    background-color: transparent;
     color: var(--lightest-slate);
     border-radius: var(--border-radius);
     font-size: var(--fz-sm);
     padding: 0.2em 0.4em;
-  }
-
-  pre code {
-    background-color: transparent;
-    padding: 0;
   }
 
   details {
