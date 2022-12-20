@@ -1,6 +1,6 @@
 ---
 title: The Rock-Paper-Scissor logic
-description: IDK
+description: Writing a method to check wether you win, lose or tie in a game of Rock-Paper-Scissor. With only two if statements and no 'or' or 'and' operators.
 date: 2022-12-19
 draft: false
 slug: /blog/the-rock-paper-scissor-logic
