@@ -38,13 +38,13 @@ Try to find the solution yourself before you read the next section.
 ---
 
 <details> 
-  <summary style = "animate: 2s">Need a hint? </summary>
+<summary>Need a hint?</summary>
 
 ```java:title=RockPaperScissor.java
 public class RockPaperScissor {
     //highlight-start
     //Use an array of characters to represent the choices
-    static char[] choices = {'C', 'A', 'B', 'C', 'A'};
+    static char[] choices = {'C', 'A', 'B', 'C'};
     //highlight-end
     public static int checkWinner(char player, char opponent) {
         if(...) return 3;
@@ -60,7 +60,7 @@ public class RockPaperScissor {
 ---
 
 <details> 
-  <summary>Need one more hint? </summary>
+<summary>Need one more hint?</summary>
 
 Look at this pattern\
 Whenever the player wins,\
@@ -75,12 +75,6 @@ If we organize this a bit differently, we can find a pattern\
 `C` `A` `B` `C` `A` <- the array we created\
 `opponent choice`
 
-And whenever the player loses, this is the pattern.\
-`player choice`\
-`B` `C` `A` `B` `C`\
-`C` `A` `B` `C` `A` <- the array we created\
-`opponent choice`
-
 Notice how whenever we win, the opponent's choice is always one value behind of the player's choice in the array.\
 ie.\
 when the player choice is `B`, the opponent's choice is `A`\
@@ -92,11 +86,11 @@ this is the extra element at the start.
 ---
 
 <details> 
-  <summary>Here's my solution to the problem- </summary>
+<summary>Here's my solution to the problem-</summary>
 
 ```java:title=RockPaperScissor.java
 public class RockPaperScissor {
-    static char[] choices = {'C', 'A', 'B', 'C', 'A'};
+    static char[] choices = {'C', 'A', 'B', 'C'};
     public static int checkWinner(char player, char opponent) {
         //In case of a tie
         if(player == opponent) return 3;
@@ -120,7 +114,7 @@ But the choices array starts from 1 because of the extra elements on both the en
 So we add `1` to the value.
 
 Now since we know that we can only win if the opponent's choice is one value behind the player's choice, we can use the `choices` array to check if the player wins or not.\
-So to check for the win, we can simply use `choices[player - 'A' + 1 - 1] == opponent`
+So to check for the win, we can simply use `choices[player - 'A' + 1 - 1] == opponent` (simplified to `choices[player - 'A'] == opponent`)
 
 And that's how you solve this in just three lines of code./
 Thanks for reading :))))))
