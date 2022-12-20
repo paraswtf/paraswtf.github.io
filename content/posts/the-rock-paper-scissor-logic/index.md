@@ -1,6 +1,6 @@
 ---
 title: The Rock-Paper-Scissor logic
-description: How to make a simple game of rock paper scissor (using the random() function on the Math class)
+description: IDK
 date: 2022-12-19
 draft: false
 slug: /blog/the-rock-paper-scissor-logic
