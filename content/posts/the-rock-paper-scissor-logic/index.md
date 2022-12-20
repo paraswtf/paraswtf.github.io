@@ -9,7 +9,7 @@ tags:
   - Java
 ---
 
-How would you go about solving this problem.
+How would you go about solving this problem?
 
 **`You have write a method to check wether you win, lose or tie in a game of Rock-Paper-Scissor, based on the choice of you and your opponent.`**\
 **`The method should return 2 if you win, 1 if you tie and 0 if you lose.`**\
@@ -126,3 +126,7 @@ And that's how you solve this in just three lines of code./
 Thanks for reading :))))))
 
 </details>
+
+---
+
+This is from one of the problems in the [Advent of Code 2022](https://adventofcode.com/2022/day/2).
