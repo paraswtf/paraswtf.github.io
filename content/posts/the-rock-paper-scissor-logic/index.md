@@ -25,9 +25,9 @@ Here is the program you need to make changes to, replace the places where there'
 public class RockPaperScissor {
     ...
     public static int checkWinner(char player, char opponent) {
-        if(...) return 1;
+        if(...) return 3;
         ...
-        if(...) return 2;
+        if(...) return 6;
         return 0;
     }
 }
@@ -47,9 +47,9 @@ public class RockPaperScissor {
     static char[] choices = {'C', 'A', 'B', 'C', 'A'};
     //highlight-end
     public static int checkWinner(char player, char opponent) {
-        if(...) return 1;
+        if(...) return 3;
         ...
-        if(...) return 2;
+        if(...) return 6;
         return 0;
     }
 }
@@ -99,9 +99,9 @@ public class RockPaperScissor {
     static char[] choices = {'C', 'A', 'B', 'C', 'A'};
     public static int checkWinner(char player, char opponent) {
         //In case of a tie
-        if(player == opponent) return 1;
+        if(player == opponent) return 3;
         //In case of a win
-        if(choices[player - 'A'] == opponent)  return 2;
+        if(choices[player - 'A'] == opponent)  return 6;
         //In case of a loss
         return 0;
     }
