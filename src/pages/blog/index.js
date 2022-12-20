@@ -113,6 +113,9 @@ const StyledPost = styled.li`
   }
 
   .post__date {
+    margin-top: 0.2em;
+    margin-right: 0.5em;
+    align-self: flex-start;
     color: var(--light-slate);
     font-family: var(--font-mono);
     font-size: var(--fz-xxs);
