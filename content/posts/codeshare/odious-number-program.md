@@ -60,6 +60,35 @@ OUTPUT: INVALID INPUT
 
 ## Solution
 
+### Algorithms
+
+For `main()`:
+
+1. Prompt the user to enter a positive whole number.
+2. Read the user's input and store it in a variable `num`.
+3. If `num` is negative, display an error message and terminate the program.
+4. Convert `num` to its binary equivalent using the `toBinaryString` method.
+5. Count the number of ones in the binary string using the `countOnes` method.
+6. If the number of ones is odd, print that `num` is an Odious number.
+7. If the number of ones is even, print that `num` is not an Odious number.
+
+For `toBinaryString()`:
+
+1. Initialize a variable `binaryString` to the empty string.
+2. While `num` is greater than 0:
+   1. Prepend the remainder of `num` divided by 2 to `binaryString`.
+   2. Divide `num` by 2.
+3. Return `binaryString`.
+
+For `countOnes()`:
+
+1. Initialize a variable `count` to 0.
+2. Iterate through each character `c` in the string `str`:
+   1. If `c` is '1', increment `count` by 1.
+3. Return `count`.
+
+### Source Code
+
 ```java
 import java.util.Scanner;
 
@@ -137,7 +166,7 @@ public class Main {
 }
 ```
 
-## Variable tables
+### Variable tables
 
 ---
 
