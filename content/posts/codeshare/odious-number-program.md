@@ -33,6 +33,7 @@ Test your program with the sample data and some random data:
 - Example 1:
 
 ```text
+
 INPUT: 11
 OUTPUT:
 BINARY EQUIVALENT = 1011
@@ -138,26 +139,34 @@ public class Main {
 
 ## Variable tables
 
-- main()
+---
+
+Method - `main()`
 
 | Variable       | Type       | Description                                                               |
-| -------------- | ---------- | ------------------------------------------------------------------------- |
+| :------------- | :--------- | :------------------------------------------------------------------------ |
 | `scan`         | `Scanner`  | A Scanner object used to read input from the user                         |
 | `num`          | `int`      | The positive whole number entered by the user                             |
 | `binaryString` | `String`   | The binary equivalent of `num` as a string                                |
 | `numOnes`      | `int`      | The number of ones in `binaryString`                                      |
 | `args`         | `String[]` | The command-line arguments passed to the program (unused in this program) |
 
-- toBinaryString()
+---
+
+Method - `toBinaryString()`
 
 | Variable       | Type     | Description                                                                  |
-| -------------- | -------- | ---------------------------------------------------------------------------- |
+| :------------- | :------- | :--------------------------------------------------------------------------- |
 | `num`          | `int`    | The number to convert to a binary string                                     |
 | `binaryString` | `String` | The binary equivalent of `num` as a string (initialized to the empty string) |
 
-- countOnes()
+---
+
+Method - `countOnes()`
 
 | Variable | Type     | Description                                    |
-| -------- | -------- | ---------------------------------------------- |
+| :------- | :------- | :--------------------------------------------- |
 | `str`    | `String` | The string to count the number of ones in      |
 | `count`  | `int`    | The number of ones in `str` (initialized to 0) |
+
+---

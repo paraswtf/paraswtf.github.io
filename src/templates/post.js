@@ -42,7 +42,7 @@ const StyledPostContent = styled.div`
     color: var(--lightest-slate);
     border-radius: var(--border-radius);
     font-size: var(--fz-sm);
-    padding: 0.2em 0.4em;
+    padding: 0;
   }
 
   details {
@@ -93,6 +93,11 @@ const StyledPostContent = styled.div`
   details > ul {
     padding-bottom: 1rem;
     margin-bottom: 0;
+  }
+
+  th,
+  td {
+    padding-right: 1rem;
   }
 `;
 
