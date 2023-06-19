@@ -68,15 +68,8 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m currently a student of{' '}
-        <a
-          href="https://www.ryangroup.org/ryaninternational/icse/navi-mumbai/ryan-international-school-kharghar"
-          target="_blank"
-          rel="noreferrer">
-          Ryan International School
-        </a>{' '}
-        doing my 12th. I’m a full-stack developer specializing in building fast and reliable web
-        apps. Currently, I’m working on creating my own design agency with a few of my friends at{' '}
+        I’m a full-stack developer specializing in building fast and reliable web apps. Currently,
+        I’m working on creating my own design agency with a few of my friends at{' '}
         <a href="https://instagram.com/styxo.codes" target="_blank" rel="noreferrer">
           styxo.codes
         </a>

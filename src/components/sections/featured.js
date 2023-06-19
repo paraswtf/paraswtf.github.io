@@ -264,40 +264,21 @@ const StyledProject = styled.li`
       &:focus {
         background: transparent;
         outline: 0;
+        mix-blend-mode: multiply;
+        filter: grayscale(20%) contrast(1) brightness(90%);
 
-        &:before,
-        .img {
-          background: transparent;
-          filter: none;
+        @media (max-width: 768px) {
+          filter: grayscale(20%) contrast(1) brightness(50%);
         }
       }
 
-      &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 3;
-        transition: var(--transition);
-        background-color: var(--navy);
-        mix-blend-mode: screen;
-      }
-    }
-
     .img {
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1) brightness(90%);
 
       @media (max-width: 768px) {
         object-fit: cover;
         width: auto;
         height: 100%;
-        filter: grayscale(100%) contrast(1) brightness(50%);
       }
     }
   }

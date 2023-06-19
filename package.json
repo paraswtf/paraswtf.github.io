@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Personal Website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Paras Deshpande <paras@styxo.codes>, Brittany Chiang <brittany.chiang@gmail.com>",
   "repository": {
     "type": "git",

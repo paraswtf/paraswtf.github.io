@@ -65,6 +65,7 @@ const StyledPic = styled.div`
 
     &:hover,
     &:focus {
+      cursor: pointer;
       outline: 0;
 
       &:after {
