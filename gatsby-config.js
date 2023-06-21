@@ -1,9 +1,6 @@
 const config = require('./src/config');
 
 module.exports = {
-  flags: {
-    PARTIAL_HYDRATION: true,
-  },
   siteMetadata: {
     title: 'Paras Deshpande',
     description:
