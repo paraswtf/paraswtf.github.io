@@ -6,6 +6,7 @@ import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
+import Tilt from 'react-parallax-tilt';
 
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
@@ -17,6 +18,7 @@ const StyledProjectsGrid = styled.ul`
 `;
 
 const StyledProject = styled.li`
+  transform-style: preserve-3d;
   position: relative;
   display: grid;
   grid-gap: 10px;
@@ -92,6 +94,7 @@ const StyledProject = styled.li`
   }
 
   .project-content {
+    transform: translateZ(60px);
     position: relative;
     grid-column: 1 / 7;
     grid-row: 1 / -1;
@@ -160,7 +163,7 @@ const StyledProject = styled.li`
     background-color: var(--light-navy);
     color: var(--light-slate);
     font-size: var(--fz-lg);
-    filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.1));     
+    filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.1));
 
     @media (max-width: 768px) {
       padding: 20px 0;
@@ -371,54 +374,60 @@ const Featured = () => {
             const image = getImage(cover);
 
             return (
-              <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
-                <div className="project-content">
-                  <div>
-                    <p className="project-overline">Featured Project</p>
+              <Tilt
+                key={i}
+                ref={el => (revealProjects.current[i] = el)}
+                tiltMaxAngleX={5}
+                tiltMaxAngleY={3}>
+                <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
+                  <div className="project-content">
+                    <div>
+                      <p className="project-overline">Featured Project</p>
 
-                    <h3 className="project-title">
-                      <a href={external}>{title}</a>
-                    </h3>
+                      <h3 className="project-title">
+                        <a href={external}>{title}</a>
+                      </h3>
 
-                    <div
-                      className="project-description"
-                      dangerouslySetInnerHTML={{ __html: html }}
-                    />
+                      <div
+                        className="project-description"
+                        dangerouslySetInnerHTML={{ __html: html }}
+                      />
 
-                    {tech.length && (
-                      <ul className="project-tech-list">
-                        {tech.map((tech, i) => (
-                          <li key={i}>{tech}</li>
-                        ))}
-                      </ul>
-                    )}
-
-                    <div className="project-links">
-                      {cta && (
-                        <a href={cta} aria-label="Course Link" className="cta">
-                          Learn More
-                        </a>
+                      {tech.length && (
+                        <ul className="project-tech-list">
+                          {tech.map((tech, i) => (
+                            <li key={i}>{tech}</li>
+                          ))}
+                        </ul>
                       )}
-                      {github && (
-                        <a href={github} aria-label="GitHub Link">
-                          <Icon name="GitHub" />
-                        </a>
-                      )}
-                      {external && !cta && (
-                        <a href={external} aria-label="External Link" className="external">
-                          <Icon name="External" />
-                        </a>
-                      )}
+
+                      <div className="project-links">
+                        {cta && (
+                          <a href={cta} aria-label="Course Link" className="cta">
+                            Learn More
+                          </a>
+                        )}
+                        {github && (
+                          <a href={github} aria-label="GitHub Link">
+                            <Icon name="GitHub" />
+                          </a>
+                        )}
+                        {external && !cta && (
+                          <a href={external} aria-label="External Link" className="external">
+                            <Icon name="External" />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
-                    <GatsbyImage image={image} alt={title} className="img" />
-                  </a>
-                </div>
-              </StyledProject>
+                  <div className="project-image">
+                    <a href={external ? external : github ? github : '#'}>
+                      <GatsbyImage image={image} alt={title} className="img" />
+                    </a>
+                  </div>
+                </StyledProject>
+              </Tilt>
             );
           })}
       </StyledProjectsGrid>
