@@ -79,6 +79,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
     line-height: 1.3;
+    background-image: linear-gradient(var(--light-navy) 1px, transparent 1px), linear-gradient(to right, var(--light-navy) 1px, var(--navy) 1px);
+    background-size: 12px 12px;
 
     @media (max-width: 480px) {
       font-size: var(--fz-lg);
