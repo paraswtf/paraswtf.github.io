@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { email } from '@config';
 import { Side } from '@components';
-import ThemeToggleButton from './theme-toggle';
 
 const StyledLinkWrapper = styled.div`
   display: flex;
@@ -39,7 +38,6 @@ const StyledLinkWrapper = styled.div`
 const Email = ({ isHome }) => (
   <Side isHome={isHome} orientation="right">
     <StyledLinkWrapper>
-      <ThemeToggleButton />
       <a href={`mailto:${email}`}>{email}</a>
     </StyledLinkWrapper>
   </Side>
