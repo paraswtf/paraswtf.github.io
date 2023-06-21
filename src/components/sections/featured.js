@@ -160,6 +160,7 @@ const StyledProject = styled.li`
     background-color: var(--light-navy);
     color: var(--light-slate);
     font-size: var(--fz-lg);
+    filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.1));     
 
     @media (max-width: 768px) {
       padding: 20px 0;
@@ -256,19 +257,49 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
+      border: 1px solid var(--lightest-navy);
       border-radius: var(--border-radius);
       vertical-align: middle;
+      filter: drop-shadow(30px 30px 10px rgba(0, 0, 0, 0.1));
+
+      :before {
+        background: var(--light-navy);
+        border-radius: 50%;
+        width: 480px;
+        height: 360px;
+        margin-left: -400px;
+      }
+
+      :after {
+        background: var(--light-navy);
+        width: 240px;
+        height: 180px;
+        z-index: -1;
+      }
+
+      :before,
+      :after {
+        opacity: 0.5;
+	      content: "";
+	      left: 50%;
+	      position: absolute;
+	      filter: blur(45px);
+	      transform: translateZ(0);
+        :hover,
+        :focus {
+          transform: translateZ(10);
+        }
+      }
 
       &:hover,
       &:focus {
-        background: transparent;
-        outline: 0;
+        opacity: 0.9;
         mix-blend-mode: multiply;
-        filter: grayscale(20%) contrast(1) brightness(90%);
+        filter: brightness(110%) drop-shadow(30px 30px 10px rgba(0, 0, 0, 0.1));
+        transition: var(--transition);
 
         @media (max-width: 768px) {
-          filter: grayscale(20%) contrast(1) brightness(50%);
+          filter: brightness(105%) drop-shadow(30px 30px 10px rgba(0, 0, 0, 0.1));
         }
       }
 
