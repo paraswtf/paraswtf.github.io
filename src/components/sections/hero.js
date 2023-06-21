@@ -49,14 +49,10 @@ const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
 
-  const [isDark, setDark] = useState(true);
-
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
     }
-
-    setDark(document.documentElement.dataset.theme === 'dark');
 
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
     return () => clearTimeout(timeout);
@@ -85,19 +81,6 @@ const Hero = () => {
       <a className="email-link" href="/blog">
         Read my blog!
       </a>{' '}
-      <button
-        className="email-link js-theme-toggle"
-        aria-label="Theme toggle"
-        onClickCapture={e => {
-          e.preventDefault();
-          const { theme } = document.documentElement.dataset;
-          const themeTo = theme && theme === 'light' ? 'dark' : 'light';
-          setDark(themeTo === 'dark');
-          document.documentElement.setAttribute('data-theme', themeTo);
-          localStorage.setItem('theme', themeTo);
-        }}>
-        Activate {isDark ? 'light' : 'dark'} mode
-      </button>
     </>
   );
 
