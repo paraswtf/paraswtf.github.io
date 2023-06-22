@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const Container = styled.label`
   & {
@@ -106,15 +105,10 @@ export const ThemeToggleButton = () => {
         document.documentElement.setAttribute('data-theme', themeTo);
         localStorage.setItem('theme', themeTo);
       }}>
-      <input type="checkbox" defaultChecked={isDark} checked={isDark} />
+      <input type="checkbox" checked={isDark} readOnly />
       <div />
     </Container>
   );
-};
-
-ThemeToggleButton.propTypes = {
-  isDark: PropTypes.bool,
-  setDark: PropTypes.func.isRequired,
 };
 
 export default ThemeToggleButton;
