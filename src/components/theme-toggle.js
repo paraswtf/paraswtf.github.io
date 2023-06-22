@@ -1,12 +1,10 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Container = styled.label`
   & {
     cursor: pointer;
-    margin: 40px;
     padding: 6px;
   }
 
@@ -82,17 +80,12 @@ const Container = styled.label`
   }
 `;
 
-export const ThemeToggleButton = () => {
-  const { theme } = document.documentElement.dataset;
-
-  const [isDark, setDark] = useState(true);
-
+export const ThemeToggleButton = ({ isDark, setDark }) => {
   useEffect(() => {
     setDark(document.documentElement.dataset.theme === 'dark');
   }, []);
 
   return (
-    // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <Container
       className={`${isDark ? 'IsDark' : 'IsLight'}`}
       title={isDark ? 'Activate light mode' : 'Activate dark mode'}
@@ -105,10 +98,15 @@ export const ThemeToggleButton = () => {
         document.documentElement.setAttribute('data-theme', themeTo);
         localStorage.setItem('theme', themeTo);
       }}>
-      <input type="checkbox" defaultChecked={theme === 'dark'} checked={theme === 'dark'} />
+      <input type="checkbox" defaultChecked={isDark} />
       <div />
     </Container>
   );
+};
+
+ThemeToggleButton.propTypes = {
+  isDark: PropTypes.bool,
+  setDark: PropTypes.func.isRequired,
 };
 
 export default ThemeToggleButton;

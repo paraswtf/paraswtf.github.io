@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { email } from '@config';
 import { Side } from '@components';
-import { ThemeToggleButton } from '@components/loadable-theme-toggle';
+import { ThemeToggleButton } from '@components/theme-toggle';
 
 const StyledLinkWrapper = styled.div`
   display: flex;
@@ -36,14 +36,17 @@ const StyledLinkWrapper = styled.div`
   }
 `;
 
-const Email = ({ isHome }) => (
-  <Side isHome={isHome} orientation="right">
-    <StyledLinkWrapper>
-      <ThemeToggleButton />
-      <a href={`mailto:${email}`}>{email}</a>
-    </StyledLinkWrapper>
-  </Side>
-);
+const Email = ({ isHome }) => {
+  const [isDark, setDark] = React.useState(false);
+  return (
+    <Side isHome={isHome} orientation="right">
+      <StyledLinkWrapper>
+        <ThemeToggleButton isDark={isDark} setDark={setDark} />
+        <a href={`mailto:${email}`}>{email}</a>
+      </StyledLinkWrapper>
+    </Side>
+  );
+};
 
 Email.propTypes = {
   isHome: PropTypes.bool,
