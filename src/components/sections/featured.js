@@ -30,6 +30,7 @@ const StyledProject = styled.li`
     ${({ theme }) => theme.mixins.boxShadow};
     border: 1px solid var(--lightest-navy);
     border-radius: var(--border-radius);
+    background-color: var(--card-navy);
   }
 
   &:not(:last-of-type) {
@@ -257,7 +258,7 @@ const StyledProject = styled.li`
     @media (max-width: 768px) {
       grid-column: 1 / -1;
       height: 100%;
-      opacity: 0.25;
+      opacity: 0.15;
     }
 
     a {
