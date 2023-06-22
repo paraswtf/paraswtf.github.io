@@ -27,6 +27,8 @@ const StyledProject = styled.li`
 
   @media (max-width: 768px) {
     ${({ theme }) => theme.mixins.boxShadow};
+    border: 1px solid var(--lightest-navy);
+    border-radius: var(--border-radius);
   }
 
   &:not(:last-of-type) {
@@ -89,6 +91,7 @@ const StyledProject = styled.li`
 
       @media (max-width: 768px) {
         grid-column: 1 / -1;
+        filter: blur(1px);
       }
     }
   }
@@ -378,7 +381,8 @@ const Featured = () => {
                 key={i}
                 ref={el => (revealProjects.current[i] = el)}
                 tiltMaxAngleX={5}
-                tiltMaxAngleY={3}>
+                tiltMaxAngleY={3}
+                tiltEnable={!navigator.userAgentData.mobile && !prefersReducedMotion}>
                 <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                   <div className="project-content">
                     <div>

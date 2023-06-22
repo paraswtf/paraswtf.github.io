@@ -172,7 +172,10 @@ const About = () => {
           </ul>
         </StyledText>
 
-        <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2}>
+        <Tilt
+          tiltMaxAngleX={2}
+          tiltMaxAngleY={2}
+          tiltEnable={!navigator.userAgentData.mobile && !prefersReducedMotion}>
           <StyledPic>
             <div className="wrapper">
               <StaticImage
