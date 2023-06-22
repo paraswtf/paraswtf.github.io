@@ -380,8 +380,8 @@ const Featured = () => {
               <Tilt
                 key={i}
                 ref={el => (revealProjects.current[i] = el)}
-                tiltMaxAngleX={5}
-                tiltMaxAngleY={3}
+                tiltMaxAngleX={2}
+                tiltMaxAngleY={1}
                 tiltEnable={!navigator.userAgentData.mobile && !prefersReducedMotion}>
                 <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                   <div className="project-content">
