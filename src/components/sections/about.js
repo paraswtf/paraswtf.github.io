@@ -129,6 +129,21 @@ const About = () => {
 
   const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'NextJS', 'Node.js', 'WordPress'];
 
+  const styledPic = () => (
+    <StyledPic>
+      <div className="wrapper">
+        <StaticImage
+          className="img"
+          src="../../images/me.jpg"
+          width={500}
+          quality={95}
+          formats={['AUTO', 'WEBP', 'AVIF']}
+          alt="Headshot"
+        />
+      </div>
+    </StyledPic>
+  );
+
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
       <h2 className="numbered-heading">About Me</h2>
@@ -171,24 +186,13 @@ const About = () => {
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
           </ul>
         </StyledText>
-
-        <Tilt
-          tiltMaxAngleX={2}
-          tiltMaxAngleY={2}
-          tiltEnable={!navigator.userAgentData.mobile && !prefersReducedMotion}>
-          <StyledPic>
-            <div className="wrapper">
-              <StaticImage
-                className="img"
-                src="../../images/me.jpg"
-                width={500}
-                quality={95}
-                formats={['AUTO', 'WEBP', 'AVIF']}
-                alt="Headshot"
-              />
-            </div>
-          </StyledPic>
-        </Tilt>
+        {navigator.userAgentData.mobile || prefersReducedMotion ? (
+          styledPic()
+        ) : (
+          <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2}>
+            <StyledPic>{styledPic()}</StyledPic>
+          </Tilt>
+        )}
       </div>
     </StyledAboutSection>
   );
