@@ -9,6 +9,12 @@ const Container = styled.label`
     margin: 40px;
   }
 
+  &:hover,
+  &:active {
+    scale: 1.1;
+    transition: all 0.3s ease;
+  }
+
   .container {
     position: relative;
     display: block;
