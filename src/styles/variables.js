@@ -3,6 +3,7 @@ import { css } from 'styled-components';
 const variables = css`
   :root {
     --dark-navy: #021a27;
+    --gray-navy: #0230476f;
     --navy: #021a27;
     --light-navy: #023047;
     --lightest-navy: #04374f;
@@ -51,6 +52,7 @@ const variables = css`
 
   [data-theme='light'] {
     --dark-navy: #f1faee;
+    --gray-navy: #eeeeee;
     --navy: #f1faee;
     --light-navy: #eeeeee;
     --lightest-navy: #495670;

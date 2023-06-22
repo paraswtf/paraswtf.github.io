@@ -84,6 +84,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media (max-width: 480px) {
       font-size: var(--fz-lg);
+      background-image: linear-gradient(var(--gray-navy) 1px, transparent 1px), linear-gradient(to right, var(--gray-navy) 1px, var(--navy) 1px);
     }
 
     &.hidden {
