@@ -163,7 +163,7 @@ const StyledProject = styled.li`
     z-index: 2;
     padding: 25px;
     border-radius: var(--border-radius);
-    background-color: var(--light-navy);
+    background-color: var(--card-navy);
     color: var(--light-slate);
     font-size: var(--fz-lg);
     filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.1));

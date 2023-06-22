@@ -5,6 +5,7 @@ const variables = css`
     --dark-navy: #021a27;
     --gray-navy: #0230476f;
     --navy: #021a27;
+    --card-navy: #023047;
     --light-navy: #023047;
     --lightest-navy: #04374f;
     --navy-shadow: rgba(1, 24, 36, 0.7);
@@ -54,6 +55,7 @@ const variables = css`
     --dark-navy: #f1faee;
     --gray-navy: #eeeeee;
     --navy: #f1faee;
+    --card-navy: #ededed;
     --light-navy: #eeeeee;
     --lightest-navy: #495670;
     --navy-shadow: rgba(1, 24, 36, 0.7);
