@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { email } from '@config';
 import { Side } from '@components';
-import { ThemeToggleButton } from '@components/theme-toggle';
+import { ThemeToggleButton } from '@components/loadable-theme-toggle';
 
 const StyledLinkWrapper = styled.div`
   display: flex;
