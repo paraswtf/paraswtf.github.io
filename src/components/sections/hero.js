@@ -3,7 +3,6 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
-import { ThemeToggleButton } from '@components';
 // import { email } from '@config';
 
 const StyledHeroSection = styled.section`
@@ -82,7 +81,6 @@ const Hero = () => {
       <a className="email-link" href="/blog">
         Read my blog!
       </a>{' '}
-      <ThemeToggleButton />
     </>
   );
 
