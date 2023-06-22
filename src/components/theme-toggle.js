@@ -6,6 +6,7 @@ const Container = styled.label`
   & {
     cursor: pointer;
     padding: 6px;
+    margin: 40px;
   }
 
   .container {
