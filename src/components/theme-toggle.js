@@ -98,7 +98,7 @@ export const ThemeToggleButton = ({ isDark, setDark }) => {
         document.documentElement.setAttribute('data-theme', themeTo);
         localStorage.setItem('theme', themeTo);
       }}>
-      <input type="checkbox" defaultChecked={isDark} />
+      <input type="checkbox" defaultChecked={isDark} checked={isDark} />
       <div />
     </Container>
   );
