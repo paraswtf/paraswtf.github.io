@@ -290,6 +290,9 @@ const StyledProject = styled.li`
 	      left: 50%;
 	      position: absolute;
 	      filter: blur(45px);
+        @media (max-width: 768px) {
+          filter: unset;
+        }
 	      transform: translateZ(0);
         :hover,
         :focus {
