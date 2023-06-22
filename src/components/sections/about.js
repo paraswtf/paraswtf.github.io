@@ -128,7 +128,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'NextJS', 'Node.js', 'WordPress'];
+  const skills = [
+    'JavaScript (ES6+)',
+    'TypeScript',
+    'React',
+    'NextJS',
+    'Node.js',
+    'Docker',
+    'MongoDB',
+    'Redis',
+  ];
 
   const styledPic = () => (
     <StyledPic>
