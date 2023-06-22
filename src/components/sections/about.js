@@ -5,6 +5,7 @@ import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 import Tilt from 'react-parallax-tilt';
+import { isMobile } from 'react-device-detect';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -186,7 +187,7 @@ const About = () => {
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
           </ul>
         </StyledText>
-        {navigator.userAgentData.mobile || prefersReducedMotion ? (
+        {isMobile || prefersReducedMotion ? (
           styledPic()
         ) : (
           <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2}>

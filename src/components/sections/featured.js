@@ -7,6 +7,7 @@ import { srConfig } from '@config';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 import Tilt from 'react-parallax-tilt';
+import { isMobile } from 'react-device-detect';
 
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
@@ -428,7 +429,7 @@ const Featured = () => {
               </StyledProject>
             );
 
-            return navigator.userAgentData.mobile || prefersReducedMotion ? (
+            return isMobile || prefersReducedMotion ? (
               styledProj()
             ) : (
               <Tilt
