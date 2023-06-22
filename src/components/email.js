@@ -36,17 +36,14 @@ const StyledLinkWrapper = styled.div`
   }
 `;
 
-const Email = ({ isHome }) => {
-  const [isDark, setDark] = React.useState(false);
-  return (
-    <Side isHome={isHome} orientation="right">
-      <StyledLinkWrapper>
-        <ThemeToggleButton isDark={isDark} setDark={setDark} />
-        <a href={`mailto:${email}`}>{email}</a>
-      </StyledLinkWrapper>
-    </Side>
-  );
-};
+const Email = ({ isHome }) => (
+  <Side isHome={isHome} orientation="right">
+    <StyledLinkWrapper>
+      <ThemeToggleButton />
+      <a href={`mailto:${email}`}>{email}</a>
+    </StyledLinkWrapper>
+  </Side>
+);
 
 Email.propTypes = {
   isHome: PropTypes.bool,

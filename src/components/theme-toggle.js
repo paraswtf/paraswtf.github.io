@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -80,7 +80,8 @@ const Container = styled.label`
   }
 `;
 
-export const ThemeToggleButton = ({ isDark, setDark }) => {
+export const ThemeToggleButton = () => {
+  const [isDark, setDark] = useState(true);
   useEffect(() => {
     setDark(document.documentElement.dataset.theme === 'dark');
   }, []);
