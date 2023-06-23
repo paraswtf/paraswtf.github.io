@@ -55,20 +55,22 @@ const variables = css`
     --dark-navy: #f1faee;
     --gray-navy: #eeeeee;
     --navy: #f1faee;
-    --card-navy: #ededed;
+    --card-navy: #ebf7eb;
     --light-navy: #eeeeee;
-    --lightest-navy: #495670;
+    --lightest-navy: #b5c2bc;
     --navy-shadow: rgba(1, 24, 36, 0.7);
     --dark-slate: #495670;
     --slate: #011824;
     --light-slate: #021a27;
     --lightest-slate: #021a27;
     --white: #021a27;
-    --green: #023047;
+    --green: #147793;
     --green-tint: rgba(100, 255, 218, 0.1);
     --pink: #f57dff;
     --blue: #57cbff;
   }
 `;
+
+//0466c8
 
 export default variables;
