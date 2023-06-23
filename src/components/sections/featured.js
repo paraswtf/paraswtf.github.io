@@ -19,7 +19,6 @@ const StyledProjectsGrid = styled.ul`
 `;
 
 const StyledProject = styled.li`
-  transform-style: preserve-3d;
   position: relative;
   display: grid;
   grid-gap: 10px;
@@ -98,7 +97,6 @@ const StyledProject = styled.li`
   }
 
   .project-content {
-    transform: translateZ(60px);
     position: relative;
     grid-column: 1 / 7;
     grid-row: 1 / -1;
@@ -173,6 +171,7 @@ const StyledProject = styled.li`
       padding: 20px 0;
       background-color: transparent;
       box-shadow: none;
+      filter: none;
 
       &:hover {
         box-shadow: none;
@@ -258,7 +257,7 @@ const StyledProject = styled.li`
     @media (max-width: 768px) {
       grid-column: 1 / -1;
       height: 100%;
-      opacity: 0.15;
+      opacity: 0.02;
     }
 
     a {
@@ -268,6 +267,9 @@ const StyledProject = styled.li`
       border-radius: var(--border-radius);
       vertical-align: middle;
       filter: drop-shadow(30px 30px 10px rgba(0, 0, 0, 0.1));
+      @media (max-width: 768px) {
+        filter: none;
+      }
 
       :before {
         background: var(--light-navy);
@@ -292,24 +294,23 @@ const StyledProject = styled.li`
 	      position: absolute;
 	      filter: blur(45px);
         @media (max-width: 768px) {
-          filter: unset;
-        }
-	      transform: translateZ(0);
-        :hover,
-        :focus {
-          transform: translateZ(10);
+          display: none;
+          filter: none;
         }
       }
 
       &:hover,
       &:focus {
         opacity: 0.9;
+        opacity: 0.9;
+        mix-blend-mode: multiply;
+        opacity: 0.9; 
         mix-blend-mode: multiply;
         filter: brightness(110%) drop-shadow(30px 30px 10px rgba(0, 0, 0, 0.1));
         transition: var(--transition);
 
         @media (max-width: 768px) {
-          filter: brightness(105%) drop-shadow(30px 30px 10px rgba(0, 0, 0, 0.1));
+          filter: none;
         }
       }
 
