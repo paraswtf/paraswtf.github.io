@@ -18,11 +18,7 @@ const StyledProjectsGrid = styled.ul`
   }
 
   * {
-    transform-style: flat;
-
-    @media (max-width: 768px) {
-      transform-style: flat;
-    }
+    ${isMobile ? 'transform-style: flat;' : 'transform-style: preserve-3d'}
   }
 `;
 
@@ -108,7 +104,7 @@ const StyledProject = styled.li`
     position: relative;
     grid-column: 1 / 7;
     grid-row: 1 / -1;
-    transform: translateZ(30px);
+    transform: translateZ(60px);
 
     @media (max-width: 1080px) {
       grid-column: 1 / 9;
