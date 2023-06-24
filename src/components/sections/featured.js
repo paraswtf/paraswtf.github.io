@@ -18,7 +18,7 @@ const StyledProjectsGrid = styled.ul`
   }
 
   * {
-    transform-style: preserve-3d;
+    transform-style: flat;
 
     @media (max-width: 768px) {
       transform-style: flat;
