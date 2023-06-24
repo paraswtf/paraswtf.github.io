@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 import Tilt from 'react-parallax-tilt';
 import { isMobile } from 'react-device-detect';
+import { useColourScheme } from '../../hooks';
 
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
@@ -369,7 +370,7 @@ const Featured = () => {
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
-  const { colourScheme } = useTheme();
+  const [colourScheme] = useColourScheme();
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -391,7 +392,10 @@ const Featured = () => {
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
             const { external, title, tech, github, cover_dark, cover_light, cta } = frontmatter;
-            const image = getImage(colourScheme === 'dark' ? cover_dark : cover_light);
+            const images = {
+              light: getImage(cover_light),
+              dark: getImage(cover_dark),
+            };
             const styledProj = () => (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
@@ -437,7 +441,7 @@ const Featured = () => {
 
                 <div className="project-image">
                   <a href={external ? external : github ? github : '#'}>
-                    <GatsbyImage image={image} alt={title} className="img" />
+                    <GatsbyImage image={images[colourScheme]} alt={title} className="img" />
                   </a>
                 </div>
               </StyledProject>

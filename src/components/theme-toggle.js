@@ -88,7 +88,7 @@ const Container = styled.label`
 `;
 
 export const ThemeToggleButton = () => {
-  const { colourScheme, setColourScheme } = useColourScheme();
+  const [colourScheme, setColourScheme] = useColourScheme();
   const isDark = colourScheme === 'dark';
   useEffect(() => {
     setColourScheme(document.documentElement.dataset.theme ?? 'dark');
