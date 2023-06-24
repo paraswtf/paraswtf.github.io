@@ -19,6 +19,10 @@ const StyledProjectsGrid = styled.ul`
 
   * {
     transform-style: preserve-3d;
+
+    @media (max-width: 768px) {
+      transform-style: flat;
+    }
   }
 `;
 
@@ -118,6 +122,7 @@ const StyledProject = styled.li`
       grid-column: 1 / -1;
       padding: 40px 40px 30px;
       z-index: 5;
+      transform: none;
     }
 
     @media (max-width: 480px) {
