@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { Icon } from '@components/icons';
@@ -343,7 +343,12 @@ const Featured = () => {
           node {
             frontmatter {
               title
-              cover {
+              cover_dark {
+                childImageSharp {
+                  gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+                }
+              }
+              cover_light {
                 childImageSharp {
                   gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                 }
@@ -364,6 +369,7 @@ const Featured = () => {
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const { colourScheme } = useTheme();
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -384,8 +390,8 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
-            const image = getImage(cover);
+            const { external, title, tech, github, cover_dark, cover_light, cta } = frontmatter;
+            const image = getImage(colourScheme === 'dark' ? cover_dark : cover_light);
             const styledProj = () => (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">

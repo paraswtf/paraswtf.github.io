@@ -13,6 +13,7 @@ const StyledContent = styled.div`
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
+  const [colourScheme, setColourScheme] = useState('dark');
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
@@ -51,7 +52,7 @@ const Layout = ({ children, location }) => {
       <Head />
 
       <div id="root">
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={{ ...theme, colourScheme, setColourScheme }}>
           <GlobalStyle />
 
           <a className="skip-to-content" href="#content">
