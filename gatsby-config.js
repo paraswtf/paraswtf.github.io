@@ -5,7 +5,7 @@ module.exports = {
     title: 'Paras Deshpande',
     description:
       'Paras Deshpande is a full-stack developer specializing in building fast and reliable web apps.',
-    siteUrl: 'https://styxo.codes', // No trailing slash allowed!
+    siteUrl: 'https://paraswtf.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@paraswtf',
   },

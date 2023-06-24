@@ -16,6 +16,14 @@ const StyledProjectsGrid = styled.ul`
     position: relative;
     z-index: 1;
   }
+
+  * {
+    transform-style: preserve-3d;
+
+    @media (max-width: 768px) {
+      transform-style: flat;
+    }
+  }
 `;
 
 const StyledProject = styled.li`
@@ -100,6 +108,7 @@ const StyledProject = styled.li`
     position: relative;
     grid-column: 1 / 7;
     grid-row: 1 / -1;
+    transform: translateZ(30px);
 
     @media (max-width: 1080px) {
       grid-column: 1 / 9;
@@ -113,6 +122,7 @@ const StyledProject = styled.li`
       grid-column: 1 / -1;
       padding: 40px 40px 30px;
       z-index: 5;
+      transform: none;
     }
 
     @media (max-width: 480px) {
