@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
+import { useColourScheme } from '../hooks';
 
 const Container = styled.label`
   & {
@@ -87,7 +88,7 @@ const Container = styled.label`
 `;
 
 export const ThemeToggleButton = () => {
-  const { colourScheme, setColourScheme } = useTheme();
+  const { colourScheme, setColourScheme } = useColourScheme();
   const isDark = colourScheme === 'dark';
   useEffect(() => {
     setColourScheme(document.documentElement.dataset.theme ?? 'dark');

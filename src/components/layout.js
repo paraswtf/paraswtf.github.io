@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
+import { ColourSchemeProvider } from '../hooks';
 
 const StyledContent = styled.div`
   display: flex;
@@ -13,7 +14,6 @@ const StyledContent = styled.div`
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
-  const [colourScheme, setColourScheme] = useState('dark');
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
@@ -52,27 +52,29 @@ const Layout = ({ children, location }) => {
       <Head />
 
       <div id="root">
-        <ThemeProvider theme={{ ...theme, colourScheme, setColourScheme }}>
-          <GlobalStyle />
+        <ThemeProvider theme={{ ...theme }}>
+          <ColourSchemeProvider>
+            <GlobalStyle />
 
-          <a className="skip-to-content" href="#content">
-            Skip to Content
-          </a>
+            <a className="skip-to-content" href="#content">
+              Skip to Content
+            </a>
 
-          {isLoading && isHome ? (
-            <Loader finishLoading={() => setIsLoading(false)} />
-          ) : (
-            <StyledContent>
-              <Nav isHome={isHome} />
-              <Social isHome={isHome} />
-              <Email isHome={isHome} />
+            {isLoading && isHome ? (
+              <Loader finishLoading={() => setIsLoading(false)} />
+            ) : (
+              <StyledContent>
+                <Nav isHome={isHome} />
+                <Social isHome={isHome} />
+                <Email isHome={isHome} />
 
-              <div id="content">
-                {children}
-                <Footer />
-              </div>
-            </StyledContent>
-          )}
+                <div id="content">
+                  {children}
+                  <Footer />
+                </div>
+              </StyledContent>
+            )}
+          </ColourSchemeProvider>
         </ThemeProvider>
       </div>
     </>
