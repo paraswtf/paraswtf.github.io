@@ -67,7 +67,7 @@ const variables = css`
     --green: #147793;
     --green-tint: rgba(100, 255, 218, 0.1);
     --pink: #f57dff;
-    --blue: #57cbff;
+    --blue: #1da1f2;
   }
 `;
 
