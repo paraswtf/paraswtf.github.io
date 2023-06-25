@@ -332,7 +332,10 @@ const Featured = () => {
   const data = useStaticQuery(graphql`
     {
       featured: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/featured/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/content/featured/" }
+          frontmatter: { draft: { ne: true } }
+        }
         sort: { fields: [frontmatter___date], order: ASC }
       ) {
         edges {
@@ -353,6 +356,7 @@ const Featured = () => {
               github
               external
               cta
+              draft
             }
             html
           }
