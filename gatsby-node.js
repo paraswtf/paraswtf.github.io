@@ -64,15 +64,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     });
   });
-
-  //Redirects
-  const { createRedirect } = actions;
-  createRedirect({
-    fromPath: '/github',
-    toPath: 'https://github.com/paraswtf',
-    isPermanent: false,
-    redirectInBrowser: true,
-  });
 };
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
