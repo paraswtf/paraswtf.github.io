@@ -13,18 +13,19 @@
   </a>
 </p>
 <p>
-Hosted URLs
+   Hosted URLs
    <br/>
-   - <a href="https://paraswtf.com/" target="_blank">paraswtf.com</a>
+   - <a href="https://paraswtf.com/" target="_blank">paraswtf.com</a> (netlify)
    <br/>
-   - <a href="https://paras.codes/" target="_blank">paras.codes</a>
+   - <a href="https://paras.codes/" target="_blank">paras.codes</a> (netlify)
    <br/>
-   - <a href="https://paraswtf.netlify.app/" target="_blank">paraswtf.netlify.app</a>
+   - <a href="https://paraswtf.netlify.app/" target="_blank">paraswtf.netlify.app</a> (netlify)
    <br/>
-   - <a href="https://paraswtf.vercel.app/" target="_blank">paraswtf.vercel.app</a>
+   - <a href="https://paraswtf.vercel.app/" target="_blank">paraswtf.vercel.app</a> (vercel)
    <br/>
-   - <a href="https://paraswtf.github.io/" target="_blank">paraswtf.github.io</a>
+   - <a href="https://paraswtf.github.io/" target="_blank">paraswtf.github.io</a> (github)
 </p>
+
 ![demo](https://raw.githubusercontent.com/paraswtf/paraswtf.github.io/main/src/images/demo.png)
 
 ## 🛠 Installation & Set Up
