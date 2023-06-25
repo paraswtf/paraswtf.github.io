@@ -11,8 +11,8 @@
   <a href="https://app.netlify.com/sites/paraswtf/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/7e180720-d4f7-405c-bdf8-8e35910e1aaa/deploy-status?branch=main" alt="Netlify Status" />
   </a>
-  <a href="https://vercel.com/paraswtf/paraswtf" target="_blank">
-    <img src="https://github.com/paraswtf/paraswtf.github.io/actions/workflows/gatsby.yml/badge.svg" alt="Vercel Status" />
+  <a href="https://pages.github.com/" target="_blank">
+    <img src="https://github.com/paraswtf/paraswtf.github.io/actions/workflows/gatsby.yml/badge.svg" alt="Github Pages Status" />
   </a>
   <a href="https://vercel.com/paraswtf/paraswtf" target="_blank">
     <img src="https://therealsujitk-vercel-badge.vercel.app/?app=paraswtf" alt="Vercel Status" />
