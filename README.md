@@ -25,6 +25,7 @@
    <br/>
    - <a href="https://paraswtf.github.io/" target="_blank">paraswtf.github.io</a> (github)
 </p>
+
 ![demo](https://raw.githubusercontent.com/paraswtf/paraswtf.github.io/main/src/images/demo.png)
 
 ## 🛠 Installation & Set Up
