@@ -11,8 +11,8 @@
   <a href="https://app.netlify.com/sites/paraswtf/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/7e180720-d4f7-405c-bdf8-8e35910e1aaa/deploy-status?branch=main" alt="Netlify Status" />
   </a>
-  <a href="https://vercel.com/paraswtf/paraswtf" target="_blank">
-    <img src="https://github.com/paraswtf/paraswtf.github.io/actions/workflows/gatsby.yml/badge.svg" alt="Vercel Status" />
+  <a href="https://pages.github.com/" target="_blank">
+    <img src="https://github.com/paraswtf/paraswtf.github.io/actions/workflows/gatsby.yml/badge.svg" alt="Github Pages Status" />
   </a>
   <a href="https://vercel.com/paraswtf/paraswtf" target="_blank">
     <img src="https://therealsujitk-vercel-badge.vercel.app/?app=paraswtf" alt="Vercel Status" />
@@ -95,5 +95,4 @@
 | White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff`       | ![#021a27](https://via.placeholder.com/10/021a27?text=+) `#021a27`       |
 | Green          | ![#26d4ff](https://via.placeholder.com/10/26d4ff?text=+) `#26d4ff`       | ![#147793](https://via.placeholder.com/10/147793?text=+) `#147793`       |
 | Green Tint     | ![#64ffda25](https://via.placeholder.com/10/64ffda25?text=+) `#64ffda25` | ![#64ffda25](https://via.placeholder.com/10/64ffda25?text=+) `#64ffda25` |
-| Pink           | ![#f57dff](https://via.placeholder.com/10/f57dff?text=+) `#f57dff`       | ![#f57dff](https://via.placeholder.com/10/f57dff?text=+) `#f57dff`       |
 | Blue           | ![#57cbff](https://via.placeholder.com/10/57cbff?text=+) `#57cbff`       | ![#1da1f2](https://via.placeholder.com/10/1da1f2?text=+) `#1da1f2`       |
