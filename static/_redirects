@@ -1,5 +1,18 @@
 # Redirects from what the browser requests to what we serve
 /home                /
-/*.php               /:splat
-/*.html              /:splat
-/* nocache=:id       /:splat
+/github              https://github.com/paraswtf
+/gh                  https://github.com/paraswtf
+/instagram           https://www.instagram.com/paraswtf
+/insta               https://www.instagram.com/paraswtf
+/gram                https://www.instagram.com/paraswtf
+/ig                  https://www.instagram.com/paraswtf
+/youtube             https://www.youtube.com/@paraswtf
+/yt                  https://www.youtube.com/@paraswtf
+/onlyfans            https://onlyfans.com/paraswtf
+/of                  https://onlyfans.com/paraswtf
+/twitter             https://twitter.com/paraswtf
+/tweet               https://twitter.com/paraswtf
+/twit                https://twitter.com/paraswtf
+/twt                 https://twitter.com/paraswtf
+/facebook            https://www.facebook.com/paraswtf
+/fb                  https://www.facebook.com/paraswtf
