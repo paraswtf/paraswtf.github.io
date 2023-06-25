@@ -95,5 +95,4 @@
 | White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff`       | ![#021a27](https://via.placeholder.com/10/021a27?text=+) `#021a27`       |
 | Green          | ![#26d4ff](https://via.placeholder.com/10/26d4ff?text=+) `#26d4ff`       | ![#147793](https://via.placeholder.com/10/147793?text=+) `#147793`       |
 | Green Tint     | ![#64ffda25](https://via.placeholder.com/10/64ffda25?text=+) `#64ffda25` | ![#64ffda25](https://via.placeholder.com/10/64ffda25?text=+) `#64ffda25` |
-| Pink           | ![#f57dff](https://via.placeholder.com/10/f57dff?text=+) `#f57dff`       | ![#f57dff](https://via.placeholder.com/10/f57dff?text=+) `#f57dff`       |
 | Blue           | ![#57cbff](https://via.placeholder.com/10/57cbff?text=+) `#57cbff`       | ![#1da1f2](https://via.placeholder.com/10/1da1f2?text=+) `#1da1f2`       |

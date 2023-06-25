@@ -16,7 +16,6 @@ const variables = css`
     --white: #e6f1ff;
     --green: #26d4ff;
     --green-tint: rgba(100, 255, 218, 0.1);
-    --pink: #f57dff;
     --blue: #57cbff;
 
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
@@ -66,7 +65,6 @@ const variables = css`
     --white: #021a27;
     --green: #147793;
     --green-tint: rgba(100, 255, 218, 0.1);
-    --pink: #f57dff;
     --blue: #1da1f2;
   }
 `;
