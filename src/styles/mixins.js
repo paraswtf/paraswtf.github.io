@@ -97,13 +97,14 @@ const mixins = {
     font-family: var(--font-mono);
     line-height: 1;
     text-decoration: none;
-    cursor: pointer;
     transition: var(--transition);
+
     &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--green-tint);
+    &:focus-visible {
       outline: none;
+      box-shadow: 1px 1px 0 0 var(--green);
+      transform: translate(-2px, -2px);
+      background-color: var(--green-tint);
     }
     &:after {
       display: none !important;
@@ -120,13 +121,14 @@ const mixins = {
     font-family: var(--font-mono);
     line-height: 1;
     text-decoration: none;
-    cursor: pointer;
     transition: var(--transition);
+
     &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--green-tint);
+    &:focus-visible {
       outline: none;
+      box-shadow: 2px 2px 0 0 var(--green);
+      transform: translate(-2px, -2px);
+      background-color: var(--green-tint);
     }
     &:after {
       display: none !important;
