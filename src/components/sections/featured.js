@@ -265,7 +265,6 @@ const StyledProject = styled.li`
       grid-column: 1 / -1;
       height: 100%;
       opacity: 0.2;
-      filter: blur(6px);
     }
 
     a {
