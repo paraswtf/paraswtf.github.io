@@ -264,7 +264,8 @@ const StyledProject = styled.li`
     @media (max-width: 768px) {
       grid-column: 1 / -1;
       height: 100%;
-      opacity: 0.02;
+      opacity: 0.2;
+      filter: blur(6px);
     }
 
     a {
@@ -313,12 +314,7 @@ const StyledProject = styled.li`
         mix-blend-mode: multiply;
         opacity: 0.9; 
         mix-blend-mode: multiply;
-        filter: brightness(110%) drop-shadow(30px 30px 10px rgba(0, 0, 0, 0.1));
         transition: var(--transition);
-
-        @media (max-width: 768px) {
-          filter: none;
-        }
       }
 
     .img {
