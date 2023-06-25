@@ -12,8 +12,20 @@
     <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
   </a>
 </p>
-
-![demo](https://raw.githubusercontent.com/paraswtf/portfolio/gatsby/src/images/demo.png)
+<p>
+Hosted URLs
+   <br/>
+   - <a href="https://paraswtf.com/" target="_blank">paraswtf.com</a>
+   <br/>
+   - <a href="https://paras.codes/" target="_blank">paras.codes</a>
+   <br/>
+   - <a href="https://paraswtf.netlify.app/" target="_blank">paraswtf.netlify.app</a>
+   <br/>
+   - <a href="https://paraswtf.vercel.app/" target="_blank">paraswtf.vercel.app</a>
+   <br/>
+   - <a href="https://paraswtf.github.io/" target="_blank">paraswtf.github.io</a>
+</p>
+![demo](https://raw.githubusercontent.com/paraswtf/paraswtf.github.io/main/src/images/demo.png)
 
 ## 🛠 Installation & Set Up
 
