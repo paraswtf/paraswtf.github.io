@@ -8,6 +8,7 @@ import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 import Tilt from 'react-parallax-tilt';
 import { isMobile } from 'react-device-detect';
+import { useColourScheme } from '../../hooks';
 
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
@@ -18,11 +19,7 @@ const StyledProjectsGrid = styled.ul`
   }
 
   * {
-    transform-style: preserve-3d;
-
-    @media (max-width: 768px) {
-      transform-style: flat;
-    }
+    ${isMobile ? 'transform-style: flat;' : 'transform-style: preserve-3d'}
   }
 `;
 
@@ -108,7 +105,7 @@ const StyledProject = styled.li`
     position: relative;
     grid-column: 1 / 7;
     grid-row: 1 / -1;
-    transform: translateZ(30px);
+    transform: translateZ(60px);
 
     @media (max-width: 1080px) {
       grid-column: 1 / 9;
@@ -267,7 +264,7 @@ const StyledProject = styled.li`
     @media (max-width: 768px) {
       grid-column: 1 / -1;
       height: 100%;
-      opacity: 0.02;
+      opacity: 0.05;
     }
 
     a {
@@ -316,12 +313,7 @@ const StyledProject = styled.li`
         mix-blend-mode: multiply;
         opacity: 0.9; 
         mix-blend-mode: multiply;
-        filter: brightness(110%) drop-shadow(30px 30px 10px rgba(0, 0, 0, 0.1));
         transition: var(--transition);
-
-        @media (max-width: 768px) {
-          filter: none;
-        }
       }
 
     .img {
@@ -340,14 +332,22 @@ const Featured = () => {
   const data = useStaticQuery(graphql`
     {
       featured: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/featured/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/content/featured/" }
+          frontmatter: { draft: { ne: true } }
+        }
         sort: { fields: [frontmatter___date], order: ASC }
       ) {
         edges {
           node {
             frontmatter {
               title
-              cover {
+              cover_dark {
+                childImageSharp {
+                  gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+                }
+              }
+              cover_light {
                 childImageSharp {
                   gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                 }
@@ -356,6 +356,7 @@ const Featured = () => {
               github
               external
               cta
+              draft
             }
             html
           }
@@ -368,6 +369,7 @@ const Featured = () => {
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const [colourScheme] = useColourScheme();
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -388,8 +390,11 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
-            const image = getImage(cover);
+            const { external, title, tech, github, cover_dark, cover_light, cta } = frontmatter;
+            const images = {
+              light: getImage(cover_light),
+              dark: getImage(cover_dark),
+            };
             const styledProj = () => (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
@@ -435,7 +440,7 @@ const Featured = () => {
 
                 <div className="project-image">
                   <a href={external ? external : github ? github : '#'}>
-                    <GatsbyImage image={image} alt={title} className="img" />
+                    <GatsbyImage image={images[colourScheme]} alt={title} className="img" />
                   </a>
                 </div>
               </StyledProject>

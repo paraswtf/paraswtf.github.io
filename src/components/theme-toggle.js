@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { useColourScheme } from '../hooks';
 
 const Container = styled.label`
   & {
@@ -87,9 +88,10 @@ const Container = styled.label`
 `;
 
 export const ThemeToggleButton = () => {
-  const [isDark, setDark] = useState(true);
+  const [colourScheme, setColourScheme] = useColourScheme();
+  const isDark = colourScheme === 'dark';
   useEffect(() => {
-    setDark(document.documentElement.dataset.theme === 'dark');
+    setColourScheme(document.documentElement.dataset.theme ?? 'dark');
   }, []);
 
   return (
@@ -101,7 +103,7 @@ export const ThemeToggleButton = () => {
         e.preventDefault();
         const { theme } = document.documentElement.dataset;
         const themeTo = theme && theme === 'light' ? 'dark' : 'light';
-        setDark(themeTo === 'dark');
+        setColourScheme(themeTo);
         document.documentElement.setAttribute('data-theme', themeTo);
         localStorage.setItem('theme', themeTo);
       }}>

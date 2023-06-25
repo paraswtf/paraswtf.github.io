@@ -8,6 +8,7 @@ import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo } from '@components/icons';
+import IconHex from './icons/hex';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -33,7 +34,7 @@ const StyledHeader = styled.header`
 
   @media (prefers-reduced-motion: no-preference) {
     ${props =>
-      props.scrollDirection === 'up' &&
+    props.scrollDirection === 'up' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -43,7 +44,7 @@ const StyledHeader = styled.header`
       `};
 
     ${props =>
-      props.scrollDirection === 'down' &&
+    props.scrollDirection === 'down' &&
       !props.scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
@@ -69,18 +70,41 @@ const StyledNav = styled.nav`
       color: var(--green);
       width: 42px;
       height: 42px;
+      position: relative;
+      z-index: 1;
 
-      &:hover,
-      &:focus {
-        svg {
-          fill: var(--green-tint);
+      .hex-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @media (prefers-reduced-motion: no-preference) {
+          transition: var(--transition);
         }
       }
 
-      svg {
-        fill: none;
-        transition: var(--transition);
-        user-select: none;
+      .logo-container {
+        position: relative;
+        z-index: 1;
+        svg {
+          fill: none;
+          user-select: none;
+          @media (prefers-reduced-motion: no-preference) {
+            transition: var(--transition);
+          }
+          polygon {
+            fill: var(--navy);
+          }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        transform: translate(-2px, -2px);
+        .hex-container {
+          transform: translate(2px, 1px);
+        }
       }
     }
   }
@@ -162,11 +186,21 @@ const Nav = ({ isHome }) => {
     <div className="logo" tabIndex="-1">
       {isHome ? (
         <a href="/" aria-label="home">
-          <IconLogo />
+          <div className="hex-container">
+            <IconHex />
+          </div>
+          <div className="logo-container">
+            <IconLogo />
+          </div>
         </a>
       ) : (
         <Link to="/" aria-label="home">
-          <IconLogo />
+          <div className="hex-container">
+            <IconHex />
+          </div>
+          <div className="logo-container">
+            <IconLogo />
+          </div>
         </Link>
       )}
     </div>

@@ -1,7 +1,8 @@
 ---
 date: '1'
 title: 'Profyl.in'
-cover: './profyl.png'
+cover_dark: './dark.png'
+cover_light: './light.png'
 github: 'https://dev.prf.ink/github'
 external: 'https://dev.prf.ink/'
 cta: ''
