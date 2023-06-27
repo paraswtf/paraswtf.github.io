@@ -29,6 +29,18 @@ const Layout = ({ children, location }) => {
   };
 
   useEffect(() => {
+    const torch = document.querySelector('.torch');
+    document.onmousemove = e => {
+      if (torch) {
+        torch.setAttribute(
+          'style',
+          `top: ${e.pageY + 500}px; left: ${
+            e.pageX + 500
+          }px; transition: 0.05s linear; overflow: visible`,
+        );
+      }
+    };
+
     if (isLoading) {
       return;
     }
@@ -49,6 +61,7 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
+      <div className="torch"></div>
       <Head />
 
       <div id="root">

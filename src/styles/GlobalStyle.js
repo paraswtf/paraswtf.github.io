@@ -444,6 +444,18 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 
+  .torch {
+    height: 1000px;
+    width: 1000px;
+    background: radial-gradient(circle, var(--green-tint) 0%,  rgba(255,255,255,0) 70%);
+	  background-size: 100%;
+	  background-repeat: no-repeat;
+	  background-position: center;
+    position: absolute;
+    margin: -1000px;
+  
+}
+
   ${TransitionStyles};
 
   ${PrismStyles};
