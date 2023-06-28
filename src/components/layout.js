@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
 import { ColourSchemeProvider } from '../hooks';
+import { isMobile } from 'react-device-detect';
 
 const StyledContent = styled.div`
   display: flex;
@@ -37,9 +38,11 @@ const Layout = ({ children, location }) => {
   }
 
   useEffect(() => {
-    //Handles flashlight effect
-    document.addEventListener('mousemove', update);
-    document.addEventListener('touchmove', update);
+    if (!isMobile) {
+      //Handles flashlight effect
+      document.addEventListener('mousemove', update);
+      document.addEventListener('touchmove', update);
+    }
 
     if (isLoading) {
       return;
@@ -59,20 +62,14 @@ const Layout = ({ children, location }) => {
     handleExternalLinks();
   }, [isLoading]);
 
+  const bubble = (
+    <div>
+      <span className="dot" />
+    </div>
+  );
+
   return (
     <>
-      {/* <div className="bubbles">
-        <div className="bubble" />
-        <div className="bubble" />
-        <div className="bubble" />
-        <div className="bubble" />
-        <div className="bubble" />
-        <div className="bubble" />
-        <div className="bubble" />
-        <div className="bubble" />
-        <div className="bubble" />
-        <div className="bubble" />
-      </div> */}
       <Head />
 
       <div id="root">
@@ -100,6 +97,7 @@ const Layout = ({ children, location }) => {
             )}
           </ColourSchemeProvider>
         </ThemeProvider>
+        <div className="bubwrapper">{Array(15).fill(bubble)}</div>
       </div>
     </>
   );
