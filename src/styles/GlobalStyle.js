@@ -114,6 +114,20 @@ const GlobalStyle = createGlobalStyle`
     grid-template-columns: 100%;
   }
 
+  /* Handles flashlight effect */
+  #root:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    background: radial-gradient(
+      circle 30vmax at var(--cursorX) var(--cursorY),
+      var(--green-tint) 0%,  rgba(255,255,255,0) 70%
+    )
+  }
+
   main {
     margin: 100px auto;
     width: 100%;
@@ -443,18 +457,6 @@ const GlobalStyle = createGlobalStyle`
   .gatsby-image-outer-wrapper {
     height: 100%;
   }
-
-  .torch {
-    height: 1000px;
-    width: 1000px;
-    background: radial-gradient(circle, var(--green-tint) 0%,  rgba(255,255,255,0) 70%);
-	  background-size: 100%;
-	  background-repeat: no-repeat;
-	  background-position: center;
-    position: absolute;
-    margin: -1000px;
-  
-}
 
   ${TransitionStyles};
 

@@ -28,18 +28,18 @@ const Layout = ({ children, location }) => {
     }
   };
 
+  //Handles flashlight position updates
+  function update(e) {
+    const x = e.clientX !== undefined ? e.clientX : e.touches[0].clientX;
+    const y = e.clientY !== undefined ? e.clientY : e.touches[0].clientY;
+    document.documentElement.style.setProperty('--cursorX', `${x}px`);
+    document.documentElement.style.setProperty('--cursorY', `${y}px`);
+  }
+
   useEffect(() => {
-    const torch = document.querySelector('.torch');
-    document.onmousemove = e => {
-      if (torch) {
-        torch.setAttribute(
-          'style',
-          `top: ${e.pageY + 500}px; left: ${
-            e.pageX + 500
-          }px; transition: 0.05s linear; overflow: visible`,
-        );
-      }
-    };
+    //Handles flashlight effect
+    document.addEventListener('mousemove', update);
+    document.addEventListener('touchmove', update);
 
     if (isLoading) {
       return;
@@ -61,7 +61,18 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <div className="torch"></div>
+      {/* <div className="bubbles">
+        <div className="bubble" />
+        <div className="bubble" />
+        <div className="bubble" />
+        <div className="bubble" />
+        <div className="bubble" />
+        <div className="bubble" />
+        <div className="bubble" />
+        <div className="bubble" />
+        <div className="bubble" />
+        <div className="bubble" />
+      </div> */}
       <Head />
 
       <div id="root">
