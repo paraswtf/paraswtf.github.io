@@ -116,6 +116,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Handles flashlight effect */
   .ballast {
+    z-index: -1;
     height: 200px;
     width: 200px;
     background-repeat: no-repeat;
