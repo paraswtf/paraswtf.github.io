@@ -31,13 +31,6 @@ const Layout = ({ children, location }) => {
 
   //Handles flashlight position updates
   function update(e) {
-    const ballast = document.querySelector('.ballast');
-    if (ballast) {
-      ballast.setAttribute(
-        'style',
-        `top: ${e.pageY - 100}px; left: ${e.pageX - 100}px; position: absolute;`,
-      );
-    }
     const x = e.clientX;
     const y = e.clientY;
     document.documentElement.style.setProperty('--cursorX', `${x}px`);
@@ -109,7 +102,6 @@ const Layout = ({ children, location }) => {
             .map((v, i) => bubble(i))}
         </div>
       </div>
-      <div className="ballast" />
     </>
   );
 };

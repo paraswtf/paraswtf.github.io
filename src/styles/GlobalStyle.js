@@ -115,15 +115,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /* Handles flashlight effect */
-  .ballast {
-    z-index: -1;
-    height: 200px;
-    width: 200px;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    background-size: 80%;
-  }
   @media (min-width: 768px) {
     #root:before {
       content: '';
