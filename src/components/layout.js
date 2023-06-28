@@ -31,8 +31,15 @@ const Layout = ({ children, location }) => {
 
   //Handles flashlight position updates
   function update(e) {
-    const x = e.clientX !== undefined ? e.clientX : e.touches[0].clientX;
-    const y = e.clientY !== undefined ? e.clientY : e.touches[0].clientY;
+    const ballast = document.querySelector('.ballast');
+    if (ballast) {
+      ballast.setAttribute(
+        'style',
+        `top: ${e.pageY - 100}px; left: ${e.pageX - 100}px; position: absolute;`,
+      );
+    }
+    const x = e.clientX;
+    const y = e.clientY;
     document.documentElement.style.setProperty('--cursorX', `${x}px`);
     document.documentElement.style.setProperty('--cursorY', `${y}px`);
   }
@@ -41,7 +48,6 @@ const Layout = ({ children, location }) => {
     if (!isMobile) {
       //Handles flashlight effect
       document.addEventListener('mousemove', update);
-      document.addEventListener('touchmove', update);
     }
 
     if (isLoading) {
@@ -103,6 +109,7 @@ const Layout = ({ children, location }) => {
             .map((v, i) => bubble(i))}
         </div>
       </div>
+      <div className="ballast" />
     </>
   );
 };
