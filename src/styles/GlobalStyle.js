@@ -465,6 +465,15 @@ const GlobalStyle = createGlobalStyle`
     height: 400%;
     width: 100%;
     position: absolute;
+    z-index: -1;
+
+    @media (max-width: 768px) {
+      opacity: 0.8;
+      height: 600%;
+      * {
+        scale: 0.5;
+      }
+    }
   }
   .bubwrapper div {
     height: 20px;

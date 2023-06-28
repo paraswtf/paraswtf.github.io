@@ -62,9 +62,9 @@ const Layout = ({ children, location }) => {
     handleExternalLinks();
   }, [isLoading]);
 
-  const bubble = (
+  const bubble = k => (
     <div>
-      <span className="dot" />
+      <span className="dot" key={k} />
     </div>
   );
 
@@ -97,7 +97,11 @@ const Layout = ({ children, location }) => {
             )}
           </ColourSchemeProvider>
         </ThemeProvider>
-        <div className="bubwrapper">{Array(15).fill(bubble)}</div>
+        <div className="bubwrapper">
+          {Array(15)
+            .fill(1)
+            .map((v, i) => bubble(i))}
+        </div>
       </div>
     </>
   );
