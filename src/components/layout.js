@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
 import { ColourSchemeProvider } from '../hooks';
+// import { isMobile } from 'react-device-detect';
 
 const StyledContent = styled.div`
   display: flex;
@@ -28,7 +29,20 @@ const Layout = ({ children, location }) => {
     }
   };
 
+  //Handles flashlight position updates
+  // function update(e) {
+  //   const x = e.clientX;
+  //   const y = e.clientY;
+  //   document.documentElement.style.setProperty('--cursorX', `${x}px`);
+  //   document.documentElement.style.setProperty('--cursorY', `${y}px`);
+  // }
+
   useEffect(() => {
+    // if (!isMobile) {
+    //   //Handles flashlight effect
+    //   document.addEventListener('mousemove', update);
+    // }
+
     if (isLoading) {
       return;
     }
@@ -46,6 +60,12 @@ const Layout = ({ children, location }) => {
 
     handleExternalLinks();
   }, [isLoading]);
+
+  const bubble = k => (
+    <div>
+      <span className="dot" key={k} />
+    </div>
+  );
 
   return (
     <>
@@ -76,6 +96,16 @@ const Layout = ({ children, location }) => {
             )}
           </ColourSchemeProvider>
         </ThemeProvider>
+        <div
+          className="bubwrapper"
+          style={{
+            width: '100%',
+            height: '100%',
+          }}>
+          {Array(15)
+            .fill(1)
+            .map((v, i) => bubble(i))}
+        </div>
       </div>
     </>
   );
