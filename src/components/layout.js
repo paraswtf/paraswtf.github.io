@@ -4,7 +4,8 @@ import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
 import { ColourSchemeProvider } from '../hooks';
-// import { isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
+import { getGPUTier } from 'detect-gpu';
 
 const StyledContent = styled.div`
   display: flex;
@@ -30,18 +31,18 @@ const Layout = ({ children, location }) => {
   };
 
   //Handles flashlight position updates
-  // function update(e) {
-  //   const x = e.clientX;
-  //   const y = e.clientY;
-  //   document.documentElement.style.setProperty('--cursorX', `${x}px`);
-  //   document.documentElement.style.setProperty('--cursorY', `${y}px`);
-  // }
+  function update(e) {
+    const x = e.clientX;
+    const y = e.clientY;
+    document.documentElement.style.setProperty('--cursorX', `${x}px`);
+    document.documentElement.style.setProperty('--cursorY', `${y}px`);
+  }
 
-  useEffect(() => {
-    // if (!isMobile) {
-    //   //Handles flashlight effect
-    //   document.addEventListener('mousemove', update);
-    // }
+  useEffect(async () => {
+    if (!isMobile && (await getGPUTier()).tier > 2) {
+      //Handles flashlight effect
+      document.addEventListener('mousemove', update);
+    }
 
     if (isLoading) {
       return;
@@ -99,12 +100,13 @@ const Layout = ({ children, location }) => {
         <div
           className="bubwrapper"
           style={{
+            position: 'fixed',
             width: '100%',
             height: '100%',
           }}>
           {Array(15)
             .fill(1)
-            .map((v, i) => bubble(i))}
+            .map((v, i) => bubble(i + 1))}
         </div>
       </div>
     </>
