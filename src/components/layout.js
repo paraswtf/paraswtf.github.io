@@ -96,7 +96,12 @@ const Layout = ({ children, location }) => {
             )}
           </ColourSchemeProvider>
         </ThemeProvider>
-        <div className="bubwrapper">
+        <div
+          className="bubwrapper"
+          style={{
+            width: '100%',
+            height: '100%',
+          }}>
           {Array(15)
             .fill(1)
             .map((v, i) => bubble(i))}
