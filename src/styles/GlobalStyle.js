@@ -112,6 +112,7 @@ const GlobalStyle = createGlobalStyle`
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 100%;
+    cursor: url(/cursor-dark.png) 16 4, pointer;
   }
 
   /* Handles flashlight effect */

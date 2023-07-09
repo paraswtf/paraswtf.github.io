@@ -66,7 +66,7 @@ const variables = css`
     --white: #021a27;
     --green: #147793;
     --green-tint: rgba(100, 255, 218, 0.1);
-    --cursor-tint: rgba(255, 162, 204, 0.1);
+    --cursor-tint: rgba(162, 214, 249, 0);
     --blue: #1da1f2;
   }
 `;

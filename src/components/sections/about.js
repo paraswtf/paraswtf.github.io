@@ -165,9 +165,9 @@ const About = () => {
               Hello! My name is Paras and I like creating cool things to solve unique problems. My
               interest in web development started back in 2018 when I decided to create{' '}
               <a href="https://github.com/paraswtf/Ririchiyo">Ririchiyo</a>, an integration for
-              Discord that let users play music and store playlists — like any sane person, I used
-              to bother every developer I found on online communities with the stupidest problems
-              while working on it, but I guess that's how I learnt!
+              Discord that let users play music and store playlists — like any annoying person, I
+              used to bother every developer I found on online communities with the stupidest
+              problems while working on it, but I guess that's how I learnt!
             </p>
             <p>
               During the pandemic in 2020, we had a lot of students from our school on discord
