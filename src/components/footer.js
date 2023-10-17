@@ -46,7 +46,7 @@ const StyledCredit = styled.div`
   line-height: 1;
 
   a {
-    padding: 10px;
+    color: var(--green);
   }
 
   .github-stats {
@@ -82,9 +82,10 @@ const Footer = () => (
     </StyledSocialLinks>
 
     <StyledCredit tabindex="-1">
-      <a href="https://brittanychiang.com/">
-        <div>Based on the design by Brittany Chiang</div>
-      </a>
+      <div>
+        Designed in <a href="https://figma.com/">Figma</a> & developed using{' '}
+        <a href="https://figma.com/">gatsby</a>.
+      </div>
     </StyledCredit>
   </StyledFooter>
 );

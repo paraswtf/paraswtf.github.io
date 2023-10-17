@@ -63,8 +63,8 @@ const Layout = ({ children, location }) => {
   }, [isLoading]);
 
   const bubble = k => (
-    <div>
-      <span className="dot" key={k} />
+    <div key={k}>
+      <span className="dot" />
     </div>
   );
 

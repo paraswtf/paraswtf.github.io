@@ -13,6 +13,10 @@ import { useColourScheme } from '../../hooks';
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
 
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
   a {
     position: relative;
     z-index: 1;
@@ -308,11 +312,9 @@ const StyledProject = styled.li`
 
       &:hover,
       &:focus {
-        opacity: 0.9;
-        opacity: 0.9;
-        mix-blend-mode: multiply;
-        opacity: 0.9; 
-        mix-blend-mode: multiply;
+        opacity: 0.8;
+        opacity: 0.8;
+        opacity: 0.8; 
         transition: var(--transition);
       }
 
