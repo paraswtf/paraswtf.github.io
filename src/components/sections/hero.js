@@ -66,8 +66,8 @@ const Hero = () => {
       <p>
         I’m a full-stack developer specializing in building fast and reliable web apps. Currently,
         I’m working on creating my own design agency with a few of my friends at{' '}
-        <a href="https://instagram.com/styxo.codes" target="_blank" rel="noreferrer">
-          styxo.codes
+        <a href="https://instagram.com/mosaicstudiosin" target="_blank" rel="noreferrer">
+          Mosaic Studios
         </a>
         .
       </p>
