@@ -6,6 +6,7 @@ draft: false
 slug: /blog/aoc22
 tags:
   - AdventOfCode2022
+  - Python
 ---
 
 _Using [Advent of Code 2022](https://adventofcode.com/2022) as an opportunity to familiarize myself with a new programming language._
