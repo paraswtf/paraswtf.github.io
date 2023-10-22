@@ -45,11 +45,13 @@ print(
 for i in range(len(elves)):
     for j in range(i, len(elves)):
         if elves[i] < elves[j]:
-            elves[i], elves[j] = elves[j], elves[i]
+            # The cool python way of swapping values without a temp variable
+            elves[i], elves[j] = elves[j], elves[i] 
 
-# add and print top 3 elves
+# add and print top x elves
 sum_calories = 0
-for i in range(3):
+count = 3 # change this to calculate however many we want to add
+for i in range(count):
     sum_calories += elves[i]
 
 print("The sum of calories carried by the top three elves is", sum_calories)

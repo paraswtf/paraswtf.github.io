@@ -23,7 +23,8 @@ Having spent time with Java, JavaScript, and TypeScript, Python's clean syntax f
 
 One of the initial differences I noticed was Python's use of indentation to denote code blocks. Unlike the familiar curly braces and semicolons, Python relies on consistent spacing to define the structure of the code. It felt strange at first, but I quickly came to appreciate the visual clarity it brought to my programs.
 
-```python
+```
+python
 # Java Code
 for (int i = 0; i < arr.length; i++) {
   System.out.println("Hello");
@@ -38,6 +39,15 @@ for i in range(len(arr)):
 
 One of the first things that caught my attention was Python's elegant way of swapping values between variables. In Java, I was accustomed to using a temporary variable for such operations, but Python offered a more concise approach.
 
+```python
+// Java
+int temp = a;
+a = b;
+b = temp;
+
+# Python
+a, b = b, a
+```
 ## Embracing the Pythonic Way
 
 Python's 'Pythonic' way of doing things quickly became evident. It encouraged a more streamlined and intuitive approach to problem-solving. For instance, the built-in functions and libraries were extensive and saved me from reinventing the wheel.
