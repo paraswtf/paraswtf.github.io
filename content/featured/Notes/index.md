@@ -6,7 +6,7 @@ cover_light: './light.png'
 github: 'https://github.com/paraswtf/Psychology-Notes'
 external: 'https://psych.styxo.codes/'
 cta: ''
-draft: true
+draft: false
 tech:
   - Vue
   - Javascript
