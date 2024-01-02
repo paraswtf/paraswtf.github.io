@@ -3,7 +3,7 @@ date: '2023-05-01'
 title: 'Software Engineer'
 company: 'Tunebot.org'
 location: 'France'
-range: 'June 2023 - present'
+range: '2023 - November 2023'
 url: 'https://tunebot.org/'
 ---
 
