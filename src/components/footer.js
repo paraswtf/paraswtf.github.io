@@ -83,8 +83,7 @@ const Footer = () => (
 
     <StyledCredit tabindex="-1">
       <div>
-        Designed in <a href="https://figma.com/">Figma</a> & developed using{' '}
-        <a href="https://www.gatsbyjs.com/">gatsby</a>.
+        Based on the design of <a href="https://v4.brittanychiang.com/">brittanychiang.com</a>.
       </div>
     </StyledCredit>
   </StyledFooter>
