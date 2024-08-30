@@ -46,10 +46,10 @@ The required information provided by all colleges can be integrated with ease in
 
 ### Expected Solutions
 
-1. Efficient Information Retrieval: The chatbot should rapidly access and provide accurate information from a comprehensive database on topics such as admissions, fees, scholarships, recommendations based on previous years cutoff, minimizing the need for human assistance. Incorporate Natural Language Processing (NLP) to support voice based assistance in English languages and can be extended in Hindi and other regional languages ensuring wide accessibility and understanding.
+1. **Efficient Information Retrieval:** The chatbot should rapidly access and provide accurate information from a comprehensive database on topics such as admissions, fees, scholarships, recommendations based on previous years cutoff, minimizing the need for human assistance. Incorporate Natural Language Processing (NLP) to support voice based assistance in English languages and can be extended in Hindi and other regional languages ensuring wide accessibility and understanding.
 
-2. Enhanced User Experience: Design an intuitive interface that allows users to navigate easily and find information quickly. The interface should be straightforward, accessible on common platform, and capable of understanding natural language, ensuring user-friendliness.
+2. **Enhanced User Experience:** Design an intuitive interface that allows users to navigate easily and find information quickly. The interface should be straightforward, accessible on common platform, and capable of understanding natural language, ensuring user-friendliness.
 
-3. Reduced Workload: By automating responses to Frequently Asked Questions (FAQ’s), the chatbot will reduce the workload on department staff, allowing them to concentrate on more complex and urgent tasks.
+3. **Reduced Workload:** By automating responses to Frequently Asked Questions (FAQ’s), the chatbot will reduce the workload on department staff, allowing them to concentrate on more complex and urgent tasks.
 
-4. Data Insights: The chatbot will gather valuable data from user interactions, helping the department to identify common concerns and optimize it’s services based on these insights.
+4. **Data Insights:** The chatbot will gather valuable data from user interactions, helping the department to identify common concerns and optimize it’s services based on these insights.
