@@ -8,17 +8,12 @@ tags:
   - Hackathon
 ---
 
-`PSID: 1631`
-
-`Organisation: Government of Rajasthan`
-
-`Department: Center for Electronic Governance`
-
-`Category: Software`
-
-`Theme: Smart Education`
-
-`For: Department of Technical Education, Government of Rajasthan.`
+**`PSID:`** `1631`  
+**`Organisation:`** `Government of Rajasthan`  
+**`Department:`** `Center for Electronic Governance`  
+**`Category:`** `Software`  
+**`Theme:`** `Smart Education`  
+**`For:`** `Department of Technical Education, Government of Rajasthan.`
 
 # AI-Powered Student Assistance Chatbot
 
