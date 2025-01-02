@@ -3,7 +3,7 @@ date: '2021-02-01'
 title: 'Founder & CEO'
 company: 'Styxo.codes'
 location: 'Navi Mumbai, India'
-range: '2021 - present'
+range: '2021 - 2022'
 url: 'https://styxo.codes/'
 ---
 

@@ -1,5 +1,5 @@
 module.exports = {
-  email: 'paras@styxo.codes',
+  email: 'paras@mosaicstudios.in',
 
   socialMedia: [
     {

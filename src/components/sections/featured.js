@@ -9,9 +9,14 @@ import { usePrefersReducedMotion } from '@hooks';
 import Tilt from 'react-parallax-tilt';
 import { isMobile } from 'react-device-detect';
 import { useColourScheme } from '../../hooks';
+import PropTypes from 'prop-types';
 
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
   a {
     position: relative;
@@ -23,7 +28,20 @@ const StyledProjectsGrid = styled.ul`
   }
 `;
 
-const StyledProject = styled.li`
+const ModdedTiltForReducedMotion = props =>
+  props.reducedMotionEnabled ? (
+    <li {...props}>{props.children}</li>
+  ) : (
+    <Tilt {...props}>{props.children}</Tilt>
+  );
+
+ModdedTiltForReducedMotion.propTypes = {
+  reducedMotionEnabled: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  ...Tilt.propTypes,
+};
+
+const StyledProject = styled(ModdedTiltForReducedMotion)`
   position: relative;
   display: grid;
   grid-gap: 10px;
@@ -308,11 +326,9 @@ const StyledProject = styled.li`
 
       &:hover,
       &:focus {
-        opacity: 0.9;
-        opacity: 0.9;
-        mix-blend-mode: multiply;
-        opacity: 0.9; 
-        mix-blend-mode: multiply;
+        opacity: 0.8;
+        opacity: 0.8;
+        opacity: 0.8; 
         transition: var(--transition);
       }
 
@@ -395,8 +411,14 @@ const Featured = () => {
               light: getImage(cover_light),
               dark: getImage(cover_dark),
             };
-            const styledProj = () => (
-              <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
+
+            return (
+              <StyledProject
+                reducedMotionEnabled={isMobile || prefersReducedMotion}
+                key={i}
+                ref={el => (revealProjects.current[i] = el)}
+                tiltMaxAngleX={2}
+                tiltMaxAngleY={1}>
                 <div className="project-content">
                   <div>
                     <p className="project-overline">Featured Project</p>
@@ -444,18 +466,6 @@ const Featured = () => {
                   </a>
                 </div>
               </StyledProject>
-            );
-
-            return isMobile || prefersReducedMotion ? (
-              styledProj()
-            ) : (
-              <Tilt
-                key={i}
-                ref={el => (revealProjects.current[i] = el)}
-                tiltMaxAngleX={2}
-                tiltMaxAngleY={1}>
-                {styledProj()}
-              </Tilt>
             );
           })}
       </StyledProjectsGrid>

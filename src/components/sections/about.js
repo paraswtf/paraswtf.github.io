@@ -137,6 +137,8 @@ const About = () => {
     'Docker',
     'MongoDB',
     'Redis',
+    'RabbitMQ (AMQP)',
+    'Flask',
   ];
 
   const styledPic = () => (
