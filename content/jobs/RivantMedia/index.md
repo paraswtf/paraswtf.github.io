@@ -1,12 +1,12 @@
 ---
-date: '2023-05-02'
-title: 'Co-Founder & CEO'
-company: 'Mosaic Studios'
+date: '2024-05-02'
+title: 'Founder & CEO'
+company: 'Rivant Media'
 location: 'Pune, India'
-range: 'June 2023 - present'
-url: 'https://mosaicstudios.in/'
+range: 'May 2024 - present'
+url: 'https://rivant.in/'
 ---
 
-- Shaped and executed Mosaic's strategic vision and goals as Co-Founder and CEO.
+- Shaped and executed Rivant Media's strategic vision and goals as Founder and CEO.
 - Led the team in creating visually appealing, user-friendly websites aligned with business objectives.
 - Worked closely with executives and team members to align technology solutions with business needs.
