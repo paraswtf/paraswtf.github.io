@@ -1551,6 +1551,11 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
+"@rivantmedia/prettier-config@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@rivantmedia/prettier-config/-/prettier-config-3.0.0.tgz#c6cdb4077cd2ddf6f811c0eb95edbc011d9d30b2"
+  integrity sha512-XorrWjDnmx4JHU6KDJEVEZhhHo6htFgaVgoaOms6+glwBdsaHjywWgfVXVTavUeovCQ25B0A6tvfsP0CDvb/nw==
+
 "@sideway/address@^4.1.3":
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/@sideway/address/-/address-4.1.4.tgz#03dccebc6ea47fdc226f7d3d1ad512955d4783f0"
@@ -2047,13 +2052,6 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@upstatement/eslint-config/-/eslint-config-1.0.1.tgz#e650f5807a02f89d07b558b1d3dc951fb871b37e"
   integrity sha512-aJe5n2+IzNwppYVmsgKs1YpZE5ewrUY2YxN706Xpq8y8kPORsOqfDzy0KsunET8JnLJ/mCZqJOCzUN4+jmGtwQ==
-
-"@upstatement/prettier-config@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@upstatement/prettier-config/-/prettier-config-1.1.0.tgz#89eac0050d82721a4e02e9b58ff3bf5ecb226639"
-  integrity sha512-+APvCz1OOuRxvo9flQz6+mTrxy2Vaq4N0Zng9lYAaPQP5cAskFB4b1Eyil58FKvM/+d/NIhwvlWsq5jq7UtaFg==
-  dependencies:
-    prettier "^2.x.x"
 
 "@vercel/webpack-asset-relocator-loader@^1.6.0":
   version "1.7.3"
@@ -9796,7 +9794,7 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==
 
-prettier@^2.2.1, prettier@^2.3.2, prettier@^2.x.x:
+prettier@^2.2.1, prettier@^2.3.2:
   version "2.8.8"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
